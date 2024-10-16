@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <a-scene device-orientation-permission-ui="enabled: false">
+            <a-sky id="sky" src="#point1" rotation="0 -80 0"></a-sky>
+            <a-assets>
+                <img id="point1" src="images/1.jpg" alt="Imagen 1">
+                <img id="point2" src="images/2.jpg" alt="Imagen 2">
+                <img id="point3" src="images/3.jpg" alt="Imagen 3">
+                <img id="point4" src="images/4.jpg" alt="Imagen 4">
+                <img id="point5" src="images/5.jpg" alt="Imagen 5">
+            </a-assets>
+            <a-entity id="spots" hotspots>
+                <a-image spot="linkto:#point2;spotgroup:groups-point2" position="-1 0 10"></a-image>
+            </a-entity>
+        </a-scene>
+        <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
