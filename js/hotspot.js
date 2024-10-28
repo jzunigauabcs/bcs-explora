@@ -1,4 +1,8 @@
 function init() {
+    const close = document.querySelector('.close');
+    close.addEventListener('click', ()=> {
+        history.back();
+    });
     AFRAME.registerComponent('spot', {
         schema: {
             linkto: {type: 'string', default: ''},
@@ -13,6 +17,12 @@ function init() {
             el.addEventListener('click', function(e) {
                 const sky = document.querySelector('#sky');
                 sky.setAttribute('src', data.linkto);
+                /*sky.setAttribute('animation__fadeout', {
+                    property: 'material.opacity',
+                    to: 0,
+                    dur: 500,
+                    easing: 'easeInQuad',
+                });*/
                 const spotComp = document.querySelector('#spots');
                 const currentSpot = this.parentElement.getAttribute('id');
                 spotComp.emit('reloadspot', {newspot: data.spotgroup, currentSpot: currentSpot})

@@ -10,3 +10,21 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+.marker {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.close {
+    z-index: 100;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
