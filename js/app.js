@@ -54,7 +54,7 @@ const init = function() {
 
         const bg = p.bg ? p.bg : 'maps-icon.svg';
 
-        el.style.backgroundImage = `url('../images/${bg}')`;
+        el.style.backgroundImage = `url('images/${bg}')`;
         el.addEventListener('click', ()=> {
             location.href = p.link;
         })
