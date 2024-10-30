@@ -41,7 +41,7 @@ const init = function() {
 
         map.flyTo({
             zoom: 7,
-            speed: 0.25,
+            speed: 0.5,
             curve: 1,
             easing: (t) => t
         });
