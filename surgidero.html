@@ -9,19 +9,30 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+        <img src="images/close.png" class="close" alt="Cerrar" title="Cerrar">
         <a-scene device-orientation-permission-ui="enabled: false">
             <a-sky id="sky" src="#point1" rotation="0 -80 0"></a-sky>
             <a-assets>
-                <img id="point1" src="images/1.jpg" alt="Imagen 1">
-                <img id="point2" src="images/2.jpg" alt="Imagen 2">
-                <img id="point3" src="images/3.jpg" alt="Imagen 3">
-                <img id="point4" src="images/4.jpg" alt="Imagen 4">
-                <img id="point5" src="images/5.jpg" alt="Imagen 5">
+                <img id="point1" src="images/1.jpg" preload='auto' alt="Imagen 1">
+                <img id="point2" src="images/2.jpg" preload='auto' alt="Imagen 2">
+                <img id="point3" src="images/3.jpg" preload='auto' alt="Imagen 3">
+                <img id="point4" src="images/4.jpg" preload='auto' alt="Imagen 4">
+                <img id="point5" src="images/5.jpg" preload='auto' alt="Imagen 5">
                 <img id="hotspot" src="images/info-icon.png" alt="hotspot">
+                <img id="point6" src="images/HSP1.PNG" preload='auto' alt="Imagen 6">
+                <img id="close" src="images/close.png" preload='auto' alt="close">
+                <img id="close1" src="images/close1.png" alt="close">
+                <img id="point" src="images/point.png" alt="point">
+                <img id="hsp2" src="images/HSP2.PNG" alt="hsp2">
+                <img id="hsp11" src="images/HSP11.PNG" alt="Imagen flores">
             </a-assets>
-            <a-entity id="spots" hotspots>
-                <a-entity id="group-point1">
+           <!-- <a-entity id="spots" hotspots>
+                <a-entity id="group-point1" scale="1 1 1">
                     <a-image spot="linkto:#point2;spotgroup:group-point2" position="8.5 0.8 8.8"></a-image>
+                    <a-image src="#point" position="10 2 -12.8" rotation="0.000 150.000 0.000" material="opacity:0.5" geometry="width: 1.7; height: 1.7"></a-image>
+                </a-entity>
+                <a-entity id="group-point6" scale="0 0 0">
+                    <a-image spot="linkto:#point1;spotgroup:group-point1" position="8.5 0.8 8.8"></a-image>
                 </a-entity>
                 <a-entity id="group-point2" scale="0 0 0">
                     <a-image spot="linkto:#point1;spotgroup:group-point1" position="1 1.2 -8"></a-image>
@@ -38,6 +49,49 @@
                 <a-entity id="group-point5" scale="0 0 0">
                     <a-image spot="linkto:#point4;spotgroup:group-point4" position="-6 0 -1.3"></a-image>
                 </a-entity>
+            </a-entity>-->
+            <a-entity id="spots" hotspots scale="1 1 1">
+                <a-entity id="group-point1">
+                    <a-image spot="linkto:#point2;spotgroup:group-point2" position="8.5 0.8 8.8" rotation="0.000 40.000 0.000" material=""  src="#hotspot" ></a-image>  
+                    <a-image id="open" src="#point" position="5 2 -12.8" rotation="0.000 150.000 0.000"  material="opacity:0.5" geometry="width: 1.7; height: 1.7" visible="true" visibilidad></a-image>
+                    <a-entity id="hsp1-image" position="8 3 -7" rotation="0.000 -35.000 0.000" visible="false">
+                        <a-plane position="0 -0.25 0" rotation="0 0 0" geometry="width: 10; height: 10.5" material="color: black; opacity: 0.7"></a-plane>
+                        <a-image position="0 2 0.01" src="#hsp2" geometry="width: 10; height: 6" material=""></a-image>
+                        <a-image position="4.3 4.3 0.03" id="close" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-text position="-2.9 -1.6 0.01" value="El junco" align="right" color="white" width="11.9" text=""></a-text>
+                        <a-text position="-4.8 -3.7 0.01" value="Es una planta perenne que pertenece a la familia Juncaceae. Se encuentra en todo el mundo, especialmente en areas humedas y pantanosas. Sus tallos son delgados y flexibles, creciendo en forma de tubo. Es comunmente asociado con la vegetacion de humedales y se utiliza para hacer cestas, tapetes y otros productos de trenzado." align="left" color="white" width="10" text=""></a-text>
+                    </a-entity>
+                </a-entity>
+                
+                <a-entity id="group-point2" scale="0 0 0">
+                    <a-image spot="linkto:#point1;spotgroup:group-point1" position="0.1 0.6 -10" ></a-image>
+                    <a-image spot="linkto:#point3;spotgroup:group-point3" position="2.5 1.2 10"></a-image>
+                    <a-image src="#point" position="5.2 2.1 10" rotation="0.000 40.000 0.000" look-at="#cam" material="opacity:0.6" geometry="width: 1.2; height: 1.2"></a-image>
+                </a-entity>
+                
+                <a-entity id="group-point3" scale="0 0 0">
+                    <a-image spot="linkto:#point4;spotgroup:group-point4" position="15.1 0.8 2" rotation="0.000 70.000 0.000"></a-image>
+                    <a-image spot="linkto:#point2;spotgroup:group-point2" position="-12.9 0.7 4" rotation="0.000 90.000 0.000"></a-image>
+                    <a-image src="#point" position="7.0 0.3 5" rotation="0.000 50.000 0.000" look-at="#cam" material="opacity:0.6" geometry="width: 1; height: 1"></a-image>
+                </a-entity>
+                
+                <a-entity id="group-point4" scale="0 0 0">
+                    <a-image spot="linkto:#point3;spotgroup:group-point3" position="-10 0 -8" rotation="0.000 40.000 0.000"></a-image>
+                    <a-image spot="linkto:#point5;spotgroup:group-point5" position="10 0 7" rotation="0.000 40.000 0.000"></a-image>
+                </a-entity>
+                
+                <a-entity id="group-point5" scale="0 0 0">
+                    <a-image spot="linkto:#point4;spotgroup:group-point4" position="-9 0 -1.3" rotation="0.000 70.000 0.000" src="#hotspot"></a-image>
+                    <a-image id="open2" position="1 -3 2.2" rotation="70 50 0" src="#point" material="opacity:0.6" visible="true" visibilidad2></a-image>
+                    <a-entity id="hsp1-image2" position="7 0.5 -2.5" rotation="0.000 -75.000 0.000" visible="false">
+                        <a-plane position="0 -0.25 0" rotation="0 0 0" geometry="width: 10; height: 10.5" material="color: black; opacity: 0.7"></a-plane>
+                        <a-image position="0 2 0.01" src="#hsp11" geometry="width: 10; height: 6" material=""></a-image>
+                        <a-image position="4.3 4.3 0.03" id="close2" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-text position="-1 -1.6 0.01" value="Ludwigia repens" align="right" color="white" width="11.9" text=""></a-text>
+                        <a-text position="-4.9 -3.7 0.01" value="Es una especie de planta con flores de la familia de las onagas conocidas por el nombre comun de sause primula rastrero. Es originaria de partes de las Americas y tiene el portencial de propagarse facilmente y naturalizarse en muchas areas. Es conocida como una maleza acuatica en algunas regiones." align="left" color="white" width="10" text=""></a-text>
+                    </a-entity>
+                </a-entity>
+    
             </a-entity>
             <a-entity id="cam" camera position="0 1.6 0" look-controls>
                 <a-entity 
@@ -51,6 +105,6 @@
         </a-scene>
         <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
         <script src="js/hotspot.js"></script>
-        <script src="js/app.js"></script>
+        <!--script src="js/app.js"></script-->
     </body>
 </html>
