@@ -43,7 +43,7 @@ function init() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     init()
 }); 
 
