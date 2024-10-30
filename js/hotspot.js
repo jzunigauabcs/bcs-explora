@@ -46,3 +46,39 @@ function init() {
 document.addEventListener('DOMContentLoaded', function() {
     init()
 }); 
+
+AFRAME.registerComponent('visibilidad', {
+    init: function () {
+        const openImage = document.querySelector('#open');
+        const hsp1Image = document.querySelector('#hsp1-image');
+        const closeButton = hsp1Image.querySelector('#close');
+
+        openImage.addEventListener('mouseenter', () => {
+            openImage.setAttribute('visible', 'false');
+            hsp1Image.setAttribute('visible', 'true');
+        });
+
+        closeButton.addEventListener('mouseenter', () => {
+            openImage.setAttribute('visible', 'true');
+            hsp1Image.setAttribute('visible', 'false');
+        });
+    }
+});
+AFRAME.registerComponent('visibilidad2', {
+    init: function () {
+        const openImage = document.querySelector('#open2');
+        const hsp1Image = document.querySelector('#hsp1-image2');
+        const closeButton = hsp1Image.querySelector('#close2');
+
+        openImage.addEventListener('mouseenter', () => {
+            openImage.setAttribute('visible', 'false');
+            hsp1Image.setAttribute('visible', 'true');
+        });
+
+        closeButton.addEventListener('mouseenter', () => {
+            openImage.setAttribute('visible', 'true');
+            hsp1Image.setAttribute('visible', 'false');
+        });
+    }
+});
+
