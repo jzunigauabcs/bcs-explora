@@ -12,20 +12,24 @@ const init = function() {
     };
     const places = [
         {
-            lat: 24.3206,
-            lng: -110.3192,
+            /*lat: 24.3206,
+            lng: -110.3192,*/
+            lat: 24.3207,
+            lng: -110.3193,
             name: 'Manglar Balandra',
             link: '#',
         },
         {
-            lat: 24.1383,
-            lng: -110.3475,
+            /*lat: 24.1383,
+            lng: -110.3475,*/
+            lat: 24.1381,
+            lng: -110.3476,
             name: 'Manglar el Conchalito',
             link: '#',
         },
         {
             lat: 23.6200,
-            lng: -109.6100,
+            lng: -109.6099,
             name: 'El Surgidero',
             bg: 'surgidero-cover.jpg',
             link: 'surgidero.html',
