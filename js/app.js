@@ -1,4 +1,4 @@
-const init = function() {
+const init = async function() {
     let zoomLevel = 1;
     mapboxgl.accessToken = 'pk.eyJ1Ijoianp1bmlnYXVhYmNzIiwiYSI6ImNtMXBqOXYyOTA1bHoya29kb25nenc4bW8ifQ.zWcn0JIIEkDDfJA6aWJFcQ';
     const lat = 24.14437; 
@@ -10,31 +10,13 @@ const init = function() {
         zoom: zoomLevel,
         center: [lng, lat]
     };
-    const places = [
-        {
-            /*lat: 24.3206,
-            lng: -110.3192,*/
-            lat: 24.3207,
-            lng: -110.3193,
-            name: 'Manglar Balandra',
-            link: '#',
-        },
-        {
-            /*lat: 24.1383,
-            lng: -110.3475,*/
-            lat: 24.1381,
-            lng: -110.3476,
-            name: 'Manglar el Conchalito',
-            link: '#',
-        },
-        {
-            lat: 23.6200,
-            lng: -109.6099,
-            name: 'El Surgidero',
-            bg: 'surgidero-cover.jpg',
-            link: 'surgidero.html',
+    const response = await fetch('../data/places.json', {
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         }
-    ];
+    });
+    const places = await response.json();
 
     const map = new mapboxgl.Map(props);
 
@@ -78,7 +60,7 @@ const init = function() {
         el.addEventListener('mouseleave', () => { popup.remove(); });
 
     });
-    
+
 };
 
 
