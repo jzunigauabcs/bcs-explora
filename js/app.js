@@ -10,6 +10,8 @@ const init = async function() {
         zoom: zoomLevel,
         center: [lng, lat]
     };
+    const baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
+    console.log(baseUrl);
     const response = await fetch('../data/places.json', {
         headers : { 
             'Content-Type': 'application/json',
