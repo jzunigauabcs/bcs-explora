@@ -1,19 +1,21 @@
 [
     {
-        "lat": 24.3207,
-        "lng": -110.3193,
+        "lat": 24.3206,
+        "lng": -110.3192,
         "name": "Manglar Balandra",
-        "link": "#"
+        "bg": "balandra-cover.jpg",
+        "link": "balandra.html",
     },
     {
         "lat": 24.1381,
-        "lng": -110.3476,
+        "lng": -110.3475,
         "name": "Manglar el Conchalito",
-        "link": "#"
+        "bg": "conchalito-cover.jpg",
+        "link": "conchalito.html"
     },
     {
         "lat": 23.6200,
-        "lng": -109.6099,
+        "lng": -109.6100,
         "name": "El Surgidero",
         "bg": "surgidero-cover.jpg",
         "link": "surgidero.html"

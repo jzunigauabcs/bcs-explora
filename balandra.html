@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="balandra">
+    <a-scene device-orientation-permission-ui="enabled: false">
+        <a-sky id="sky" src="#pointBal1" rotation="0 -80 0"></a-sky>
+        <a-assets>
+            <!--Puntos-->
+            <img id="pointBal1" src="images/balandraImgs/B1.webp" alt="Imagen 1">
+            <img id="pointBal2" src="images/balandraImgs/B2.webp" alt="Imagen 2">
+            <img id="pointBal3" src="images/balandraImgs/B3.webp" alt="Imagen 3">
+            <img id="pointBal4" src="images/balandraImgs/B4.webp" alt="Imagen 4">
+            <img id="pointBal5" src="images/balandraImgs/B5.webp" alt="Imagen 5">
+            <!--PointBal1-->
+            <img id="aves" src="images/balandraImgs/Aves.jpg" alt="Aves">
+            <img id="mangleNegro" src="images/balandraImgs/Mangle Negro.jpg" alt="Mangle negro">
+            <img id="batis" src="images/balandraImgs/Batis maritima (1).jpg" alt="Batis">
+            <!--PointBal2-->
+            <img id="copal" src="images/balandraImgs/Copal.jpg" alt="Copal">
+            <img id="dunas" src="images/balandraImgs/Dunas.jpg" alt="Dunas">
+            <img id="ecologica" src="images/balandraImgs/Sucesión Ecologica.jpg" alt="Ecologica">
+             <!--PointBal3-->
+            <img id="drAvila"  src="images/balandraImgs/Dunas.jpg" alt="dravila">
+            <img id="paisajismo" src="images/balandraImgs/Paisajismo.jpg" alt="Paisajismo">
+            <!--PointBal4-->
+            <img id="testimonial"  src="images/balandraImgs/Dunas.jpg" alt="videoTestimonial">
+            <!--PointBal5-->
+            <img id="dosel" src="images/balandraImgs/dosel.jpg" alt="Dosel">
+            <img id="raices" src="images/balandraImgs/Raíces.jpg" alt="Raices">
+            <!--Recursos extra-->
+            <video id="atras" autoplay loop muted src="images/direction.webm" alt="hotspot"></video>
+            <img id="close1" src="images/close1.png" alt="close1">
+            <img id="siguiente" src="images/sig.png" alt="sig">
+            <video id="adelante" autoplay loop muted src="images/adelante.webm" alt="adelante"></video>
+            <video id="video" autoplay loop muted src="images/try.webm"></video>
+
+        </a-assets>
+        <a-entity id="spots" hotspots scale="1 1 1">
+            <a-entity id="group-point1-balandra">
+                <a-video class="adelante" spot="linkto:#pointBal2;spotgroup:group-point2-balandra" position="11 0 -7" rotation="50 110 90" material="opacity=0.8" src="#adelante" geometry="width: 2; height: 1.8"></a-video>
+                <a-video id="op1" src="#video" position="-1 0.2 -8.8" rotation="0.000 0.000 0.000" material="opacity:0.8" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op1; imageId: tar1; closeId: clo1"></a-video>
+                <a-entity id="tar1" position="3 3 -13" rotation="0 -15 0" visible="false">
+                    <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#aves" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo1" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Aves" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="Egretta thula (garza blanca) y Egretta rufescens (garza rojiza) son especies de aves de la familia Ardeidae que habitan en humedales, lagunas costeras, estuarios y manglares, donde se alimentan de peces, crustáceos y otros organismos acuáticos. La garza blanca se distingue por su plumaje blanco, patas negras y dedos amarillos, mientras que la garza rojiza presenta dos tipos de coloración: uno rojizo y otro blanco. Ambas especies son fundamentales para el equilibrio ecológico de los ecosistemas costeros. La garza blanca no se encuentra clasificada en la NOM-059-SEMARNAT-2010, mientras que la garza rojiza sí está incluida en dicha norma bajo la categoría de “Sujetas a Protección Especial” (Pr)." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;">
+                    </a-text>
+                </a-entity>
+                
+                <a-video id="op2"src="#video" position="-5 0 -3" rotation="0.000 50.000 0.000" material="opacity:0.8" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op2; imageId: tar2; closeId: clo2"></a-video>
+                <a-entity id="tar2" position="-12 3 1" rotation="0.000 75.000 0.000" visible="false">
+                    <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#mangleNegro" position="0 2 0.01" geometry="width: 9.5; height:5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo2" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Mangle negro" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="Avicennia germinans, conocida como mangle negro, es una especie arbórea-arbustiva de la familia Acanthaceae. Crece en planicies intermareales, principalmente en bordes y zonas internas de manglares, en lagunas costeras, estuarios y bahías, sobre suelos salinos arcillosos o limosos con inundaciones periódicas. Presenta raíces (neumatóforos) que facilitan el intercambio de gases en condiciones anóxicas y hojas con glándulas que excretan sal. Es fundamental para la estabilización del suelo, captura de carbono y otros servicios ecosistémicos. Dicha especie está incluida en la NOM-059-SEMARNAT-2010 bajo la categoría “Amenazada” (A)." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;">
+              </a-text></a-entity>
+
+              
+              <a-video id="op31" src="#video" position="3 -1 -1 " rotation="0.000 120.000 50.000" material="opacity:0.8" geometry="width: 1; height: 1" visible="true" visibilidad="openImageId: op31; imageId: tar31; closeId: clo31"></a-video>
+              <a-entity id="tar31" position="12 3 3" rotation="0.000 -95.000 0.000" visible="false">
+                <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
+                <a-image src="#batis" position="0 2 0.01" geometry="width: 9.5; height:5.5" material=""></a-image>
+                <a-image position="4.3 4.3 0.03" id="clo31" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                <a-text value="Batis" position="0 -1.3 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                <a-text value="Batis maritima, conocida como saladilla o vidrillo, es una planta halófita perenne de la familia Bataceae. Crece en planicies intermareales asociadas a manglares y marismas, en suelos salinos arenosos a limosos inundados. Destaca por su baja altura (10-50 cm), y hojas carnosas, adaptadas a ambientes salinos. Es clave para estabilizar suelos y brindar refugio a la fauna, y presenta potencial para la restauración ecológica. Esta especie no está incluida en la NOM-059-SEMARNAT-2010." position="0 -2.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 49; lineHeight: 60; baseline: top;">
+              </a-text></a-entity>
+
+              <a-video id="op32" src="#video" position="2.4 -1 5 " rotation="0.000 50.000 50.000" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op32; imageId: tar32; closeId: clo32"></a-video>
+              <a-entity id="tar32" position="-2 3 12" rotation="0.000 -180.000 0.000" visible="false">
+                <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
+                <a-image position="4.3 2.3 0.03" id="clo32" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                <a-text value="Sitio Ramsar Balandra" position="0 2.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                <a-text value="El Sitio Ramsar Balandra (número 1767), designado el 2 de febrero de 2008, se encuentra en Baja California Sur, México, y abarca 448.67 hectáreas (24° 19' N, 110° 20' W). Este humedal costero en el Golfo de California alberga una importante comunidad de manglar, la cual presenta tres de las cuatro especies de manglares presentes en México: Rhizophora mangle, Avicennia germinans y Laguncularia racemosa. Es un sitio clave para la reproducción de aves migratorias y residentes como Pelecanus occidentalis, Pandion haliaetus y Fregata magnificens. También destaca por su riqueza en reptiles, incluyendo especies como Dipsosaurus dorsalis y Callisaurus draconoides, esta última bajo amenaza." position="0 1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 60; baseline: top;">
+              </a-text></a-entity>
+            </a-entity>
+            
+            <a-entity id="group-point2-balandra" scale="0 0 0">
+                <a-video class="adelante" spot="linkto:#pointBal3;spotgroup:group-point3-balandra" rotation="10 80 85" position="10 0.6 -5" src="#adelante" material="" geometry="width:1.2; height: 1.8" ></a-video>
+                <a-video class="atras" spot="linkto:#pointBal1;spotgroup:group-point1-balandra" position="-1.5 1 10" rotation="60 0 90" src="#atras" material="opacity=0.7" geometry="width: 1.5; height: 1.5" ></a-video>
+                <a-video src="#video" id="op3" position="-1.5 0.5 3" rotation="0.000  -20.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7"  visible="true" visibilidad="openImageId: op3; imageId: tar3; closeId: clo3"></a-video>
+                <a-entity id="tar3" position="5 3 12" rotation="0 180 0" visible="false">
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#copal" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo3" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Copal" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="Bursera epinnata, conocida como copal rojo, es una especie de la familia Burseraceae que habita en zonas tropicales y subtropicales de México, especialmente en selvas bajas caducifolias y matorrales. Se caracteriza por su corteza rojiza que se desprende en láminas y su resina aromática, utilizada tradicionalmente en ceremonias religiosas y como incienso. La especie de copal rojo no está incluida en la NOM-059-SEMARNAT." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;">
+                </a-text></a-entity>
+                <a-video src="#video" id="op4" position="-5 0.5 1.5" rotation="0.000  95.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op4; imageId: tar4; closeId: clo4"></a-video>
+                <a-entity id="tar4" position="-10 3 8" rotation="0 -240 0" visible="false">
+                    <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#ecologica" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo4" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Sucesion ecologica" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="La sucesión ecológica en manglares describe los cambios en la estructura y composición de estas comunidades a lo largo del tiempo debido a factores naturales y antrópicos. Generalmente, comienza en áreas costeras con acumulación de sedimentos ricos en nutrientes, donde pioneros como Avicennia germinans colonizan gracias a su tolerancia a suelos salinos e inundados. A medida que se acumulan sedimentos y se estabiliza el sustrato, especies como Rhizophora mangle y Laguncularia racemosa pueden establecerse, formando un bosque maduro. Este proceso está influenciado por el flujo de mareas, la salinidad y la disponibilidad de nutrientes. Sin embargo, actividades humanas como el cambio de uso de suelo o la contaminación pueden interrumpir esta sucesión, afectando la funcionalidad del ecosistema." position="0 -1.9 0.01" align="center" color="white" width="9" text="wrapCount: 51; lineHeight: 48; baseline: top;"></a-text>
+                </a-entity>
+                <a-video src="#video" id="op5" position="2 0.1 -4" rotation="0.000  -20.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op5; imageId: tar5; closeId: clo5"></a-video>
+                <a-entity id="tar5" position="2 3 -10" rotation="0.000 -15.000 0.000" visible="false">
+                    <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#dunas" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo5" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Dunas" position="0 -1.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="El ecosistema de dunas presenta formaciones arenosas que albergan vegetación adaptada a condiciones áridas, proporcionando hábitat para diversas especies de fauna como reptiles. Además, actúan como barreras naturales que estabilizan sedimentos y contribuyen al ciclo de nutrientes en el humedal y protege la línea de costa contra la erosión y el impacto de tormentas. Las dunas son también un atractivo turístico, ya que forman parte del paisaje único de Balandra, siendo esenciales para su conservación frente a la presión humana y el cambio climático." position="0 -2.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;"></a-text>
+                </a-entity>
+
+                <a-video src="#video" id="op51" position="-4 0.1 -1" rotation="0.000  -90.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op51; imageId: tar51; closeId: clo51"></a-video>
+                <a-entity id="tar51" position="-8 3 -9" rotation="0.000 30.000 0.000" visible="false">
+                    <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#dunas" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo51" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Mangle rojo" position="0 -1.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="Rhizophoraceae, es un arbusto o algunas veces árbol de hasta 8 m de altura, con numerosas raíces aéreas que descienden desde las ramas y el tronco; sus hojas son gruesas. Presenta un embrión de la semilla (propágulo), el cual al desprenderse del árbol es transportado por la corriente del mar a otros lugares." position="0 -2.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 45; lineHeight: 55; baseline: top;"></a-text>
+                </a-entity>
+            </a-entity>
+            
+            <a-entity id="group-point3-balandra"  scale="0 0 0">
+                
+                <a-image class="atras" spot="linkto:#pointBal2;spotgroup:group-point2-balandra" position="2 0 10" rotation="70 40 80" src="#atras" material="opacity=0.8" geometry="width: 1.5; height: 1.8"></a-image>
+                <a-image class="adelante" spot="linkto:#pointBal4;spotgroup:group-point4-balandra" position="-9 0 10.5" rotation="30 -60 90" src="#adelante" material="opacity=0.8" geometry="width: 1.2; height: 1.5"></a-image>
+                <a-video src="#video" id="op6" position="-0.9 1.3 5" rotation="0.000  -20.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op6; imageId: tar6; closeId: clo6"></a-video>
+                <a-entity id="tar6" position="1 6 15" rotation="0 180 0" visible="false">
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#paisajismo" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo6" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Servicio ecosistémicos de paisaje" id="carousel-title" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="Balandra es considerada un símbolo icónico de la ciudad de La Paz así como del estado de Baja California Sur y de México, gracias a su extraordinaria belleza natural y valor cultural. Su emblemático hongo de piedra, formado por la erosión, es una de las imágenes más reconocidas del estado. Este sitio, con sus aguas cristalinas, manglares y dunas costeras, representa un orgullo para la comunidad local, destacando su compromiso con la conservación" position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;"></a-text>
+                </a-entity>
+                
+                <a-video src="#video" id="op7" position="-5 0.2 -1.2" rotation="0.000  60.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op7; imageId: tar7; closeId: clo7; videoId: vidDrAvila"></a-video>
+                <a-entity id="tar7" position="-10 0.2 -10" rotation="0 50 0" visible="false">
+                    <a-plane position="0 1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#drAvila" id="vidDrAvila" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo7" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value=" Dr. Giovanni Ávila Flores Especialista en manglares" id="carousel-title" position="0 -1.3 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
+                </a-entity>
+               
+                <a-video src="#video" id="op71" position="1 0.5 -2" rotation="10.000  -20.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op71; imageId: tar71; closeId: clo71"></a-video>
+                <a-entity id="tar71" position="2 0.2 -10" rotation="0 -10 0" visible="false">
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#paisajismo" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo71" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Servicio ecosistemicos y culturales" id="carousel-title" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="El ecoturismo en Balandra, especialmente mediante actividades como la navegación en kayak y la observación de aves y el paisaje marino-costero, permite a los visitantes disfrutar de sus paisajes únicos mientras se fomenta la educación ambiental. Navegar entre manglares y aguas cristalinas no sólo ofrece experiencias recreativas, sino también un vínculo directo con los servicios ecosistémicos culturales del sitio, como el valor estético, espiritual y de identidad local. Estas actividades promueven la conservación al generar ingresos sostenibles para la comunidad, reduciendo impactos negativos en el entorno." position="0 -2 0.01" align="center" color="white" width="9.0" text="wrapCount: 51; lineHeight: 49; baseline: top;"></a-text>
+                </a-entity>
+            </a-entity>
+            
+            <a-entity id="group-point4-balandra" scale="0 0 0">
+                <a-image class="adelante" spot="linkto:#pointBal5;spotgroup:group-point5-balandra" position="8 0 3" rotation="0 90 0" src="#adelante" material="opacity=0.8" geometry="width:1.8; height:1.5"></a-image>
+                <a-image class="atras" spot="linkto:#pointBal3;spotgroup:group-point3-balandra" position="4 0 15" rotation="-40.000 40.000 100.000" src="#atras" material="opacity=0.8" geometry="width:1.8; height: 2.5"></a-image>
+                <a-video src="#video" id="op8" position="-0.4 0.5 -2" rotation="0.000  10.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op8; imageId: tar8; closeId: clo8"></a-video>
+                <a-entity id="tar8" position="-1.5 1.5 -10" rotation="0  10 0" visible="false">
+                    <a-plane position="0 1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#testimonial" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.035" id="clo8" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Sumergible" id="carousel-title" position="0 -1.6 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
+                    
+                </a-entity>
+
+                <a-video src="#video" id="op81" position="-3.5 2 4" rotation="0.000  -20.000 0.000" material="opacity:0.8" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op81; imageId: tar81; closeId: clo81"></a-video>
+                <a-entity id="tar81" position="-7.5 3 14" rotation="0  150 0" visible="false">
+                    <a-plane position="0 1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#testimonial" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.035" id="clo81" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Guardaparque" id="carousel-title" position="0 -1.6 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>  
+                </a-entity>
+                
+            
+                <a-video src="#video" id="op82" position="2 0.5 2.8" rotation="10.000  20.000 0.000" material="opacity:0.8" geometry="width: 0.9; height: 0.9" visible="true" visibilidad="openImageId: op82; imageId: tar82; closeId: clo82"></a-video>
+                <a-entity id="tar82" position="9.5 5 10" rotation="0 -150 0" visible="false">
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#paisajismo" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo82" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Servicio ecosistémico maderables (biomasa)" id="carousel-title" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="La madera de los manglares de Balandra, aunque no es una fuente principal de aprovechamiento comercial, desempeña un papel crucial en los servicios ecosistémicos al proporcionar estabilidad al ecosistema costero. Además, la descomposición de la madera de los manglares contribuye al ciclo de nutrientes, enriqueciendo los sedimentos y fomentando la biodiversidad marina." position="0 -2.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 49; lineHeight: 52; baseline: top;"></a-text>
+                </a-entity>
+
+
+                <a-video id="op83" src="#video" position="4 -0.5 -3.5" rotation="0.000  -40.000 0.000" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op83; imageId: tar83; closeId: clo83"></a-video>
+                <a-entity id="tar83" position="9.5 3.5 -9" rotation="0.000 -40.000 0.000" visible="false">
+                    <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 5" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image position="4.3 0.9 0.03" id="clo83" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Servicios ecosistemico habitat" position="0 0.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="Balandra es un sitio único que alberga una gran biodiversidad, incluyendo manglares, dunas, playas y aguas costeras que sirven de hábitat para aves migratorias, reptiles, y mamíferos marinos como ballenas y delfines." position="0 -0.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 60; baseline: top;">
+                </a-text></a-entity>
+            </a-entity>
+            
+            <a-entity id="group-point5-balandra" scale="0 0 0">
+                <a-image class="atras" spot="linkto:#pointBal4;spotgroup:group-point4-balandra" position="-1 0.3 10" rotation="60 20 90" src="#atras" material="opacity:0.8" geometry="width:1.5; height:1.8"></a-image>
+                <a-video src="#video" id="op9" position="0.2 4 0.5" rotation="90.000  60.000 0.000" material="opacity:0.9" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op9; imageId: tar9; closeId: clo9"></a-video>
+                <a-entity id="tar9" position="-2 7 12" rotation="20 -180 0" visible="false">
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#dosel" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo9" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Dosel" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
+                    <a-text value="El dosel del manglar en Balandra es la capa superior formada por las ramas y hojas de los árboles de manglar, que juega un papel crucial en el ecosistema. Este dosel proporciona refugio y alimento a una gran variedad de especies, incluyendo aves, insectos y mamíferos." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 40; lineHeight: 55; baseline: top;"></a-text>
+                </a-entity>
+
+
+                <a-video src="#video" id="op10" position="2 1 -2" rotation="0.000  -50.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op10; imageId: tar10; closeId: clo10"></a-video>
+                <a-entity id="tar10" position="1 0.2 -10" rotation="0 -10 0" visible="false">
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#raices" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo10" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Raices" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;" ></a-text>
+                    <a-text value="Las raíces de los manglares en Balandra desempeñan funciones cruciales en la estabilidad ecológica de este ecosistema costero. Estas raíces, adaptadas para vivir en ambientes salinos e inundados, forman estructuras interconectadas que estabilizan los sedimentos y protegen las costas de la erosión, actuando como barreras naturales contra las olas y tormentas. Además, las raíces proporcionan hábitats importantes para diversas especies marinas, como crustáceos y peces juveniles." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;"></a-text>
+                </a-entity>
+
+                <a-video src="#video" id="op111" position="-1 1 -2" rotation="0.000  30.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op111; imageId: tar111; closeId: clo111"></a-video>
+                <a-entity id="tar111" position="-12 0.2 -6" rotation="0 50 0" visible="false">
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-image src="#raices" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image position="4.3 4.3 0.03" id="clo111" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-text value="Carbono azul" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
+                    <a-text value="Los manglares de Balandra desempeñan un papel fundamental en el secuestro de carbono azul, capturando importantes cantidades de dióxido de carbono en sus raíces y suelos, lo que contribuye a mitigar el cambio climático. La conservación de estos manglares es esencial para garantizar la continuidad de estos beneficios ambientales y climáticos." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 40; lineHeight: 50; baseline: top;"></a-text>
+                </a-entity>
+            </a-entity>
+
+        </a-entity>
+        <a-entity id="cam" camera position="0 1.6 0" look-controls>
+            <a-entity 
+                cursor="fuse: true; fuseTimeout:2000"
+                geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                position="0 0 -1.8"
+                material="shader:flat;color:#ff0000;">
+            </a-entity>
+
+            <a-entity 
+            cursor="rayOrigin: mouse"
+            raycaster="objects: .interactivo"
+            geometry="primitive:ring; radiusInner:0.01; radiusOuter:0.02"
+            position="0 0 -1.8"
+            material="shader:flat; color:#ff0000;">
+        </a-entity>
+
+        <a-image 
+            class="close interactivo" 
+            src="images/casita.png" 
+            position="0.75 0.30 -1.5" 
+            width="0.18" 
+            height="0.18"
+            event-set__click="_event: click; color: #00FF00">
+        </a-image>
+        <a-image 
+            class="menu interactivo" 
+            id="menu" 
+            src="images/menu.png" 
+            position="-0.80 0.30 -1.5" 
+            width="0.20" 
+            height="0.20"
+            event-set__click="_event: click; color: #FF0000">
+            
+        </a-image>
+
+        <a-entity id="opciones" visible="false">
+            <a-entity id="spotMenu" spot="linkto:#point1;spotgroup:group-point1" position="-2 1.1 -1.5" menu-toggle>
+                <a-plane class="interactivo" color="#ffffff" opacity="0.8" width="0.8" height="0.15"></a-plane>
+                <a-text value="Escenario 1" color="black" align="center" width="2"></a-text>
+            </a-entity>
+            <a-entity spot="linkto:#point2;spotgroup:group-point2" position="-2 0.95 -1.5" menu-toggle>
+                <a-plane class="interactivo" color="#ffffff" class="interactivo" opacity="0.8" width="0.8" height="0.15" menu-toggle></a-plane>
+                <a-text value="Escenario 2" color="black" align="center" width="2"></a-text>
+            </a-entity>
+            <a-entity spot="linkto:#point3;spotgroup:#group-point3" position="-2 0.80 -1.5" menu-toggle>
+                <a-plane class="interactivo" color="#ffffff" opacity="0.8" width="0.8" height="0.15"></a-plane>
+                <a-text value="Escenario 3" color="black" align="center" width="2"></a-text>
+            </a-entity>
+            <a-entity spot="linkto:#point4;spotgroup:#group-point4" position="-2 0.65 -1.5" menu-toggle>
+                <a-plane class="interactivo" color="#ffffff" opacity="0.8" width="0.8" height="0.15"></a-plane>
+                <a-text value="Escenario 4" color="black" align="center" width="2"></a-text>
+            </a-entity>
+        </a-entity>
+
+        <a-entity position="-0.40 0.30 -1.5">
+            <a-plane color="#222" opacity="0.6" width="0.4" height="0.12"></a-plane>
+            <a-text id="scene-value" value="Escenario 1" color="white" align="center" width="1.2"></a-text>
+        </a-entity>
+        </a-entity>
+    </a-scene>
+
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras/dist/aframe-extras.min.js"></script>
+
+    <script src="js/hotspot.js"></script>
+
+    
+</body>
+</html>

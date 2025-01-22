@@ -19,7 +19,7 @@ body {
     border-radius: 50%;
 }
 
-.close {
+/* .close {
     z-index: 100;
     position: absolute;
     width: 30px;
@@ -27,4 +27,5 @@ body {
     top: 20px;
     right: 30px;
     cursor: pointer;
-}
+} */
+
