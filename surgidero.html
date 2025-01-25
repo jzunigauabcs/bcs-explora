@@ -55,10 +55,12 @@
                     <a-video id="openS2" src="#video" position="-8 -1.3 -4" rotation="0.000 60.000 0.000" material="opacity:0.8" geometry="width: 2; height: 2" visible="true" visibilidad="openImageId: openS2; imageId: tarS2; closeId: cloS2"></a-video>
                     <a-entity id="tarS2" position="-10 3 2" rotation="0.000 90.000 0.000" visible="false">
                         <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
-                        <a-image position="4.3 2.3 0.03" id="cloS2" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-circle position="4.3 2.3 0.03" id="cloS2" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS2" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                         <a-text value="Agua dulce" position="0 1.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
                         <a-text value="El arroyo Eureka en La Ribera, Baja California Sur, es una fuente importante de agua dulce en una región predominantemente árida. Este arroyo abastece de agua a ecosistemas locales y a comunidades cercanas, siendo vital para la agricultura y la fauna silvestre. Su caudal varía según las precipitaciones estacionales, pero juega un rol crucial en la recarga de los acuíferos subterráneos. La biodiversidad en la zona incluye especies endémicas que dependen del agua dulce para sobrevivir. Sin embargo, el arroyo enfrenta presiones debido al cambio climático y al crecimiento urbano en la región." position="0 0 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;"></a-text>
                     </a-entity>
+
                     <a-entity position="0.2 0.4 -1.5" rotation="-88 -95 0.000">
                         <a-plane color="#ffffff" opacity="0.35" width="2" height="0.30" material="" geometry=""></a-plane>
                         <a-text value="Camino 1" color="black" align="center" width="4" text=""></a-text>
@@ -85,7 +87,8 @@
                     <a-video id="openS3" src="#video" position="-1 5 20" rotation="0.000 0.000 0.000" material="opacity:0.8" geometry="width: 3; height: 3" visible="true" visibilidad="openImageId: openS3; imageId: tarS3; closeId: cloS3"></a-video>
                     <a-entity id="tarS3" position="-8 3.5 10" rotation="0.000 140.000 0.000" visible="false">
                         <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
-                        <a-image position="4.3 2.3 0.03" id="cloS3" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-circle position="4.3 2.3 0.03" id="cloS3" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS3" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                         <a-text value="Pino salado" position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
                         <a-text value="Tamarix ramosissima, conocida como pino salado, es un arbusto o árbol pequeño de la familia Tamaricaceae que se encuentra en áreas costeras, márgenes de ríos y zonas salinas. Se caracteriza por sus hojas pequeñas y escamosas, y sus flores rosadas o blancas agrupadas en racimos largos y delgados. Su hábito de crecimiento es arbustivo o arbóreo, y es capaz de formar densos matorrales que pueden alterar los ecosistemas ribereños y costeros. Esta especie es resistente a suelos salinos y tolerante a la sequía y es considerada como especie invasora en México. Esta especie no está incluida en la NOM-059-SEMARNAT-2010." position="0 0.9 0.01" align="center" color="white" width="9.5" text="wrapCount: 45; lineHeight: 50; baseline: top;"></a-text>
                     </a-entity>
@@ -100,14 +103,16 @@
                     <a-video src="#video" id="openS5" position="2 1 -8" rotation="0.000 150.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: openS5; imageId: tarS5; closeId: cloS5"></a-video>
                     <a-entity id="tarS5" position="8 1 -8" rotation="0.000 -50.000 0.000" visible="false">
                         <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
-                        <a-image position="4.3 2.3 0.03" id="cloS5" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-circle position="4.3 2.3 0.03" id="cloS5" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS5" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                         <a-text value="Presencia de ganado local" position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
                         <a-text value="La presencia de ganado local en las marismas puede generar impactos negativos, especialmente en áreas con escasez de agua. El pastoreo excesivo deteriora la vegetación nativa y altera los ecosistemas acuáticos al compactar el suelo y reducir la capacidad de retención de agua. Esto puede agravar la escasez hídrica, ya que el ganado puede consumir grandes cantidades de agua dulce disponible en la zona. Además, la presión sobre los recursos hídricos limita la regeneración de vegetación clave en las marismas, afectando su capacidad para almacenar carbono y proporcionar hábitats para diversas especies. La gestión adecuada del ganado es esencial para conservar estos ecosistemas." position="0 0.9 0.01" align="center" color="white" width="9.5" text="wrapCount: 48; lineHeight: 50; baseline: top;"></a-text>
                     </a-entity>
                     <a-video src="#video" id="openS6" position="-3.5 1.4 -7" rotation="0.000 10.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: openS6; imageId: tarS6; closeId: cloS6"></a-video>
                     <a-entity id="tarS6" position="-12 1 -8" rotation="0.000 40.000 0.000" visible="false">
                         <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
-                        <a-image position="4.3 2.3 0.03" id="cloS6" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-circle position="4.3 2.3 0.03" id="cloS6" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS6" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                         <a-text value="Palmar y su asociación con la marisma y otros ecosistemas" position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
                         <a-text value="El palmar de Baja California Sur es un ecosistema costero caracterizado por la presencia de palmas, principalmente Washingtonia robusta y Brahea armata. Estos palmares se encuentran en zonas áridas y semiáridas, donde proporcionan hábitats cruciales para diversas especies de fauna, como aves y pequeños mamíferos. Además, desempeñan un papel importante en la protección del suelo contra la erosión y en la conservación del agua subterránea. Sin embargo, los palmares de Baja California Sur enfrentan amenazas por el cambio climático y la expansión urbana. La conservación de estos ecosistemas es esencial para mantener su biodiversidad y los servicios que brindan." position="0 0.3 0.01" align="center" color="white" width="9.5" text="wrapCount: 48; lineHeight: 50; baseline: top;"></a-text>
                     </a-entity>
@@ -120,7 +125,8 @@
                     <a-video src="#video" id="openS7" position="-2 -1 -3.2" rotation="0.000 30.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: openS7; imageId: tarS7; closeId: cloS7"></a-video>
                     <a-entity id="tarS7" position="2 3 -10" rotation="0.000 -10.000 0.000" visible="false">
                         <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
-                        <a-image position="4.3 2.3 0.03" id="cloS7" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-circle position="4.3 2.3 0.03" id="cloS7" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS7" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                         <a-text value="Tripa de aura" position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
                         <a-text value="El palmar de Baja California Sur es un ecosistema costero caracterizado por la presencia de palmas, principalmente Washingtonia robusta y Brahea armata. Estos palmares se encuentran en zonas áridas y semiáridas, donde proporcionan hábitats cruciales para diversas especies de fauna, como aves y pequeños mamíferos. Además, desempeñan un papel importante en la protección del suelo contra la erosión y en la conservación del agua subterránea. Sin embargo, los palmares de Baja California Sur enfrentan amenazas por el cambio climático y la expansión urbana. La conservación de estos ecosistemas es esencial para mantener su biodiversidad y los servicios que brindan." position="0 0.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 48; lineHeight: 50; baseline: top;"></a-text>
                     </a-entity>
@@ -141,7 +147,8 @@
                     <a-video src="#video" id="openS8" position="-1 0.5 -1.5" rotation="90.000 30.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 0.7; height: 0.9" visible="true" visibilidad="openImageId: openS8; imageId: tarS8; closeId: cloS8"></a-video>
                     <a-entity id="tarS8" position="-5 3 -10.5" rotation="0.000 10.000 0.000" visible="false">
                         <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
-                        <a-image position="4.3 2.3 0.03" id="cloS8" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-circle position="4.3 2.3 0.03" id="cloS8" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS8" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                         <a-text value="Carbono azul" position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
                         <a-text value="El carbono azul se refiere al carbono almacenado en los ecosistemas costeros, como las marismas, que son altamente eficaces en la captura y almacenamiento de carbono. Las marismas actúan como sumideros de carbono, absorbiendo grandes cantidades de CO2 de la atmósfera y almacenándolas en sus suelos anóxicos durante siglos. Además, ayudan a mitigar el cambio climático al reducir las concentraciones de gases de efecto invernadero. La protección y restauración de las marismas es clave para mantener este servicio ecosistémico. Sin embargo, estas áreas enfrentan amenazas por la urbanización y el cambio climático." position="0 0.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 47; lineHeight: 50; baseline: top;"></a-text>
                     </a-entity>

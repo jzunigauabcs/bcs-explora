@@ -30,10 +30,19 @@ function init() {
                         cambiarTexto(data.linkto.replace('#', ''));
                     } else if(id === "balandra") {
                         cambiarTextBal(data.linkto.replace('#', ''));
+                        //reiniciar video
+                        const doctor = document.querySelector('#drAvila');
+                        doctor.currentTime = 0; 
+                        doctor.pause();
+                        const test = document.querySelector('#testimonial');
+                        test.currentTime = 0; 
+                        test.pause();
                     } else if(id === "conchalito") {
                         cambiarTextoConAudio(data.linkto.replace('#', ''));
                     }
                 }
+                
+                
 
                 const spotComp = document.querySelector('#spots');
                 const currentSpot = this.parentElement.getAttribute('id');
@@ -60,27 +69,39 @@ AFRAME.registerComponent('visibilidad', {
     schema: {
         openImageId: { type: 'string', default: '' },
         imageId: { type: 'string', default: '' },
-        closeId: { type: 'string', default: '' }
+        closeId: { type: 'string', default: '' },
+        videoId: { type: 'string', default: '' }
     },
     init: function () {
         const openImage = document.querySelector(`#${this.data.openImageId}`);
         const hspImage = document.querySelector(`#${this.data.imageId}`);
-        const closeButton = document.querySelector(`#${this.data.closeId}`);
+        const closeButton = hspImage.querySelector(`#${this.data.closeId}`);
+     
+        openImage.addEventListener('mouseenter', () => {
+            openImage.setAttribute('visible', 'false');
+            hspImage.setAttribute('visible', 'true');
+            this.vid(true);
+        });
 
-        if (openImage && hspImage && closeButton) {
-            openImage.addEventListener('mouseenter', () => {
-                openImage.setAttribute('visible', 'false');
-                hspImage.setAttribute('visible', 'true');
-            });
-            closeButton.addEventListener('mouseenter', () => {
-                openImage.setAttribute('visible', 'true');
-                hspImage.setAttribute('visible', 'false');
-            });
-        } else {
-            console.error('Uno o más elementos no se encontraron:', { openImage, hspImage, closeButton });
+        closeButton.addEventListener('mouseenter', () => {
+            openImage.setAttribute('visible', 'true');
+            hspImage.setAttribute('visible', 'false');
+            this.vid(false);
+        });
+    },
+    vid: function (isVisible) {
+        const videoElement = document.getElementById(this.data.videoId);
+        if (videoElement) {
+            if (isVisible) {
+                videoElement.play();
+            } else {
+                videoElement.pause();
+                videoElement.currentTime = 0;
+            }
         }
     }
 });
+
 
 function autoPlayVideos(videoIds) {
     videoIds.forEach(id => {

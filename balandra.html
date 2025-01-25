@@ -26,11 +26,12 @@
             <img id="copal" src="images/balandraImgs/Copal.jpg" alt="Copal">
             <img id="dunas" src="images/balandraImgs/Dunas.jpg" alt="Dunas">
             <img id="ecologica" src="images/balandraImgs/Sucesión Ecologica.jpg" alt="Ecologica">
+            <img id="mangleRojo" src="images/balandraImgs/Mangle Rojo.jpeg" alt="Dunas">
              <!--PointBal3-->
-            <img id="drAvila"  src="images/balandraImgs/Dunas.jpg" alt="dravila">
+            <video id="drAvila" loop src="images/balandraImgs/drAvila.mp4"></video>
             <img id="paisajismo" src="images/balandraImgs/Paisajismo.jpg" alt="Paisajismo">
             <!--PointBal4-->
-            <img id="testimonial"  src="images/balandraImgs/Dunas.jpg" alt="videoTestimonial">
+            <video id="testimonial" loop src="images/balandraImgs/Testimonial B2.mp4"></video>
             <!--PointBal5-->
             <img id="dosel" src="images/balandraImgs/dosel.jpg" alt="Dosel">
             <img id="raices" src="images/balandraImgs/Raíces.jpg" alt="Raices">
@@ -77,7 +78,7 @@
               <a-video id="op32" src="#video" position="2.4 -1 5 " rotation="0.000 50.000 50.000" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op32; imageId: tar32; closeId: clo32"></a-video>
               <a-entity id="tar32" position="-2 3 12" rotation="0.000 -180.000 0.000" visible="false">
                 <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
-                <a-image position="4.3 2.3 0.03" id="clo32" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                <a-circle position="4.3 2.3 0.05" id="clo32" radius="0.3" material="src: #close1; opacity:1"></a-circle>
                 <a-text value="Sitio Ramsar Balandra" position="0 2.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
                 <a-text value="El Sitio Ramsar Balandra (número 1767), designado el 2 de febrero de 2008, se encuentra en Baja California Sur, México, y abarca 448.67 hectáreas (24° 19' N, 110° 20' W). Este humedal costero en el Golfo de California alberga una importante comunidad de manglar, la cual presenta tres de las cuatro especies de manglares presentes en México: Rhizophora mangle, Avicennia germinans y Laguncularia racemosa. Es un sitio clave para la reproducción de aves migratorias y residentes como Pelecanus occidentalis, Pandion haliaetus y Fregata magnificens. También destaca por su riqueza en reptiles, incluyendo especies como Dipsosaurus dorsalis y Callisaurus draconoides, esta última bajo amenaza." position="0 1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 60; baseline: top;">
               </a-text></a-entity>
@@ -94,6 +95,7 @@
                     <a-text value="Copal" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
                     <a-text value="Bursera epinnata, conocida como copal rojo, es una especie de la familia Burseraceae que habita en zonas tropicales y subtropicales de México, especialmente en selvas bajas caducifolias y matorrales. Se caracteriza por su corteza rojiza que se desprende en láminas y su resina aromática, utilizada tradicionalmente en ceremonias religiosas y como incienso. La especie de copal rojo no está incluida en la NOM-059-SEMARNAT." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;">
                 </a-text></a-entity>
+                
                 <a-video src="#video" id="op4" position="-5 0.5 1.5" rotation="0.000  95.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op4; imageId: tar4; closeId: clo4"></a-video>
                 <a-entity id="tar4" position="-10 3 8" rotation="0 -240 0" visible="false">
                     <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
@@ -102,6 +104,7 @@
                     <a-text value="Sucesion ecologica" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
                     <a-text value="La sucesión ecológica en manglares describe los cambios en la estructura y composición de estas comunidades a lo largo del tiempo debido a factores naturales y antrópicos. Generalmente, comienza en áreas costeras con acumulación de sedimentos ricos en nutrientes, donde pioneros como Avicennia germinans colonizan gracias a su tolerancia a suelos salinos e inundados. A medida que se acumulan sedimentos y se estabiliza el sustrato, especies como Rhizophora mangle y Laguncularia racemosa pueden establecerse, formando un bosque maduro. Este proceso está influenciado por el flujo de mareas, la salinidad y la disponibilidad de nutrientes. Sin embargo, actividades humanas como el cambio de uso de suelo o la contaminación pueden interrumpir esta sucesión, afectando la funcionalidad del ecosistema." position="0 -1.9 0.01" align="center" color="white" width="9" text="wrapCount: 51; lineHeight: 48; baseline: top;"></a-text>
                 </a-entity>
+                
                 <a-video src="#video" id="op5" position="2 0.1 -4" rotation="0.000  -20.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op5; imageId: tar5; closeId: clo5"></a-video>
                 <a-entity id="tar5" position="2 3 -10" rotation="0.000 -15.000 0.000" visible="false">
                     <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
@@ -114,7 +117,7 @@
                 <a-video src="#video" id="op51" position="-4 0.1 -1" rotation="0.000  -90.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op51; imageId: tar51; closeId: clo51"></a-video>
                 <a-entity id="tar51" position="-8 3 -9" rotation="0.000 30.000 0.000" visible="false">
                     <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image src="#dunas" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
+                    <a-image src="#mangleRojo" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
                     <a-image position="4.3 4.3 0.03" id="clo51" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
                     <a-text value="Mangle rojo" position="0 -1.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
                     <a-text value="Rhizophoraceae, es un arbusto o algunas veces árbol de hasta 8 m de altura, con numerosas raíces aéreas que descienden desde las ramas y el tronco; sus hojas son gruesas. Presenta un embrión de la semilla (propágulo), el cual al desprenderse del árbol es transportado por la corriente del mar a otros lugares." position="0 -2.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 45; lineHeight: 55; baseline: top;"></a-text>
@@ -134,59 +137,63 @@
                     <a-text value="Balandra es considerada un símbolo icónico de la ciudad de La Paz así como del estado de Baja California Sur y de México, gracias a su extraordinaria belleza natural y valor cultural. Su emblemático hongo de piedra, formado por la erosión, es una de las imágenes más reconocidas del estado. Este sitio, con sus aguas cristalinas, manglares y dunas costeras, representa un orgullo para la comunidad local, destacando su compromiso con la conservación" position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top;"></a-text>
                 </a-entity>
                 
-                <a-video src="#video" id="op7" position="-5 0.2 -1.2" rotation="0.000  60.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op7; imageId: tar7; closeId: clo7; videoId: vidDrAvila"></a-video>
+                <a-video src="#video" id="op7" position="-5 0.2 -1.2" rotation="0.000  60.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op7; imageId: tar7; closeId: clo7; videoId: drAvila"></a-video>
                 <a-entity id="tar7" position="-10 0.2 -10" rotation="0 50 0" visible="false">
                     <a-plane position="0 1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image src="#drAvila" id="vidDrAvila" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
-                    <a-image position="4.3 4.3 0.03" id="clo7" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-video src="#drAvila" id="vidDrAvila" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-video>
+                    <a-circle position="4.3 4.3 0.05" id="clo7" radius="0.3" material="src: #close1"></a-circle>
+                    <!--<a-image position="4.3 4.3 0.03" id="clo7" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                     <a-text value=" Dr. Giovanni Ávila Flores Especialista en manglares" id="carousel-title" position="0 -1.3 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
                 </a-entity>
                
                 <a-video src="#video" id="op71" position="1 0.5 -2" rotation="10.000  -20.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op71; imageId: tar71; closeId: clo71"></a-video>
-                <a-entity id="tar71" position="2 0.2 -10" rotation="0 -10 0" visible="false">
-                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image src="#paisajismo" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
-                    <a-image position="4.3 4.3 0.03" id="clo71" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
-                    <a-text value="Servicio ecosistemicos y culturales" id="carousel-title" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
-                    <a-text value="El ecoturismo en Balandra, especialmente mediante actividades como la navegación en kayak y la observación de aves y el paisaje marino-costero, permite a los visitantes disfrutar de sus paisajes únicos mientras se fomenta la educación ambiental. Navegar entre manglares y aguas cristalinas no sólo ofrece experiencias recreativas, sino también un vínculo directo con los servicios ecosistémicos culturales del sitio, como el valor estético, espiritual y de identidad local. Estas actividades promueven la conservación al generar ingresos sostenibles para la comunidad, reduciendo impactos negativos en el entorno." position="0 -2 0.01" align="center" color="white" width="9.0" text="wrapCount: 51; lineHeight: 49; baseline: top;"></a-text>
+                <a-entity id="tar71" position="2 0.2 -11" rotation="0 -10 0" visible="false">
+                    <a-plane position="0 0.5 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.85"></a-plane>
+                    <a-circle position="4.3 3.8 0.03" id="clo71" radius="0.3" material="src: #close1; opacity:1" geometry=""></a-circle>
+                    <!--<a-image position="4.3 2.8 0.03" id="clo71" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                    <a-text value="Servicio ecosistemicos y culturales" id="carousel-title" position="0 3.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="El ecoturismo en Balandra, especialmente mediante actividades como la navegación en kayak y la observación de aves y el paisaje marino-costero, permite a los visitantes disfrutar de sus paisajes únicos mientras se fomenta la educación ambiental. Navegar entre manglares y aguas cristalinas no sólo ofrece experiencias recreativas, sino también un vínculo directo con los servicios ecosistémicos culturales del sitio, como el valor estético, espiritual y de identidad local. Estas actividades promueven la conservación al generar ingresos sostenibles para la comunidad, reduciendo impactos negativos en el entorno." position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 49; lineHeight: 55; baseline: top;"></a-text>
                 </a-entity>
             </a-entity>
             
             <a-entity id="group-point4-balandra" scale="0 0 0">
                 <a-image class="adelante" spot="linkto:#pointBal5;spotgroup:group-point5-balandra" position="8 0 3" rotation="0 90 0" src="#adelante" material="opacity=0.8" geometry="width:1.8; height:1.5"></a-image>
                 <a-image class="atras" spot="linkto:#pointBal3;spotgroup:group-point3-balandra" position="4 0 15" rotation="-40.000 40.000 100.000" src="#atras" material="opacity=0.8" geometry="width:1.8; height: 2.5"></a-image>
-                <a-video src="#video" id="op8" position="-0.4 0.5 -2" rotation="0.000  10.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op8; imageId: tar8; closeId: clo8"></a-video>
+                <a-video src="#video" id="op8" position="-0.4 0.5 -2" rotation="0.000  10.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op8; imageId: tar8; closeId: clo8; videoId: testimonial"></a-video>
                 <a-entity id="tar8" position="-1.5 1.5 -10" rotation="0  10 0" visible="false">
-                    <a-plane position="0 1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image src="#testimonial" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
-                    <a-image position="4.3 4.3 0.035" id="clo8" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
-                    <a-text value="Sumergible" id="carousel-title" position="0 -1.6 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
-                    
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                    <a-video src="#testimonial" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-video>
+                    <a-circle position="4.3 4.3 0.03" id="clo8" radius="0.3" material="src: #close1; opacity:1" geometry=""></a-circle>
+                    <!--<a-image position="4.3 4.3 0.035" id="clo8" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                    <a-text value="Servicio ecosistémico pesquería" id="carousel-title" position="0 -1.3 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
+                    <a-text value="La pesca en Balandra, principalmente artesanal, depende de los servicios ecosistémicos proporcionados por sus manglares y otros ecosistemas, que sirven de hábitat y zona de cría para diversas especies de fauna. Estos ecosistemas contribuyen a la salud de las pesquerías locales al ofrecer un entorno seguro para el desarrollo de peces y crustáceos. La conservación de estos hábitats asegura la sostenibilidad de la pesca y las fuentes de ingresos para las comunidades locales." position="0 -2.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 49; lineHeight: 52; baseline: top;"></a-text>
                 </a-entity>
 
-                <a-video src="#video" id="op81" position="-3.5 2 4" rotation="0.000  -20.000 0.000" material="opacity:0.8" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op81; imageId: tar81; closeId: clo81"></a-video>
+                <a-video src="#video" id="op81" position="-3.5 2 4" rotation="0.000  -20.000 0.000" material="opacity:0.8" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op81; imageId: tar81; closeId: clo81; videoId: testimonial"></a-video>
                 <a-entity id="tar81" position="-7.5 3 14" rotation="0  150 0" visible="false">
-                    <a-plane position="0 1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image src="#testimonial" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
-                    <a-image position="4.3 4.3 0.035" id="clo81" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
-                    <a-text value="Guardaparque" id="carousel-title" position="0 -1.6 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>  
+                    <a-plane position="0 0 0" rotation="0 0 0" geometry="width: 10; height: 10" material="color: black; opacity: 0.7"></a-plane>
+                    <a-video src="#testimonial" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-video>
+                    <a-circle position="4.3 4.3 0.03" id="clo81" radius="0.3" material="src: #close1; opacity:1" geometry=""></a-circle>
+                    <!--<a-image position="4.3 4.3 0.035" id="clo81" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                    <a-text value="Servicios ecosistématicos hábitat" id="carousel-title" position="0 -1.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>  
+                    <a-text value="Alvaro Jimenez, Guardaparque APFF Balandra" position="0 -3.1 0.2" align="center" color="white" width="9.5" text="wrapCount: 30; lineHeight: 50; baseline: top;"></a-text>
                 </a-entity>
                 
             
                 <a-video src="#video" id="op82" position="2 0.5 2.8" rotation="10.000  20.000 0.000" material="opacity:0.8" geometry="width: 0.9; height: 0.9" visible="true" visibilidad="openImageId: op82; imageId: tar82; closeId: clo82"></a-video>
                 <a-entity id="tar82" position="9.5 5 10" rotation="0 -150 0" visible="false">
-                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image src="#paisajismo" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
-                    <a-image position="4.3 4.3 0.03" id="clo82" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
-                    <a-text value="Servicio ecosistémico maderables (biomasa)" id="carousel-title" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
-                    <a-text value="La madera de los manglares de Balandra, aunque no es una fuente principal de aprovechamiento comercial, desempeña un papel crucial en los servicios ecosistémicos al proporcionar estabilidad al ecosistema costero. Además, la descomposición de la madera de los manglares contribuye al ciclo de nutrientes, enriqueciendo los sedimentos y fomentando la biodiversidad marina." position="0 -2.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 49; lineHeight: 52; baseline: top;"></a-text>
+                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
+                    <a-circle position="4.3 2.8 0.03" id="clo82" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                    <!--<a-image position="4.3 2.8 0.03" id="clo82" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                    <a-text value="Servicio ecosistémico maderables (biomasa)" id="carousel-title" position="0 2.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
+                    <a-text value="La madera de los manglares de Balandra, aunque no es una fuente principal de aprovechamiento comercial, desempeña un papel crucial en los servicios ecosistémicos al proporcionar estabilidad al ecosistema costero. Además, la descomposición de la madera de los manglares contribuye al ciclo de nutrientes, enriqueciendo los sedimentos y fomentando la biodiversidad marina." position="0 0.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 40; lineHeight: 55; baseline: top;"></a-text>
                 </a-entity>
-
 
                 <a-video id="op83" src="#video" position="4 -0.5 -3.5" rotation="0.000  -40.000 0.000" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op83; imageId: tar83; closeId: clo83"></a-video>
                 <a-entity id="tar83" position="9.5 3.5 -9" rotation="0.000 -40.000 0.000" visible="false">
                     <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 5" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image position="4.3 0.9 0.03" id="clo83" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                    <a-circle position="4.3 0.9 0.03" id="clo83" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                    <!--<a-image position="4.3 0.9 0.03" id="clo83" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
                     <a-text value="Servicios ecosistemico habitat" position="0 0.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 30; baseline: top;"></a-text>
                     <a-text value="Balandra es un sitio único que alberga una gran biodiversidad, incluyendo manglares, dunas, playas y aguas costeras que sirven de hábitat para aves migratorias, reptiles, y mamíferos marinos como ballenas y delfines." position="0 -0.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 60; baseline: top;">
                 </a-text></a-entity>
@@ -215,11 +222,11 @@
 
                 <a-video src="#video" id="op111" position="-1 1 -2" rotation="0.000  30.000 0.000" material="opacity:0.8" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op111; imageId: tar111; closeId: clo111"></a-video>
                 <a-entity id="tar111" position="-12 0.2 -6" rotation="0 50 0" visible="false">
-                    <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
-                    <a-image src="#raices" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material=""></a-image>
-                    <a-image position="4.3 4.3 0.03" id="clo111" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
-                    <a-text value="Carbono azul" position="0 -1.2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
-                    <a-text value="Los manglares de Balandra desempeñan un papel fundamental en el secuestro de carbono azul, capturando importantes cantidades de dióxido de carbono en sus raíces y suelos, lo que contribuye a mitigar el cambio climático. La conservación de estos manglares es esencial para garantizar la continuidad de estos beneficios ambientales y climáticos." position="0 -2 0.01" align="center" color="white" width="9.5" text="wrapCount: 40; lineHeight: 50; baseline: top;"></a-text>
+                    <a-plane position="0 1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
+                    <a-circle position="4.3 4.3 0.03" id="clo111" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                    <!--<a-image position="4.3 4.3 0.03" id="clo111" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                    <a-text value="Carbono azul" position="0 3.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top;"></a-text>
+                    <a-text value="Los manglares de Balandra desempeñan un papel fundamental en el secuestro de carbono azul, capturando importantes cantidades de dióxido de carbono en sus raíces y suelos, lo que contribuye a mitigar el cambio climático. La conservación de estos manglares es esencial para garantizar la continuidad de estos beneficios ambientales y climáticos." position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 38; lineHeight: 50; baseline: top;"></a-text>
                 </a-entity>
             </a-entity>
 
