@@ -1,4 +1,4 @@
-const init = async function() {
+const init = function() {
     let zoomLevel = 1;
     mapboxgl.accessToken = 'pk.eyJ1Ijoianp1bmlnYXVhYmNzIiwiYSI6ImNtMXBqOXYyOTA1bHoya29kb25nenc4bW8ifQ.zWcn0JIIEkDDfJA6aWJFcQ';
     const lat = 24.14437; 
@@ -10,14 +10,29 @@ const init = async function() {
         zoom: zoomLevel,
         center: [lng, lat]
     };
-    const baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
-    const response = await fetch(`${baseUrl}/data/places.json`, {
-        headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+    const places = [
+        {
+            lat: 24.3206,
+            lng: -110.3192,
+            name: 'Manglar Balandra',
+            bg: 'balandra-cover.jpg',
+            link: 'balandra.html',
+        },
+        {
+            lat: 24.1383,
+            lng: -110.3475,
+            name: 'Manglar el Conchalito',
+            bg: 'conchalito-cover.jpg',
+            link: 'conchalito.html'
+        },
+        {
+            lat: 23.6200,
+            lng: -109.6100,
+            name: 'El Surgidero',
+            bg: 'surgidero-cover.jpg',
+            link: 'surgidero.html',
         }
-    });
-    const places = await response.json();
+    ];
 
     const map = new mapboxgl.Map(props);
 
@@ -61,7 +76,7 @@ const init = async function() {
         el.addEventListener('mouseleave', () => { popup.remove(); });
 
     });
-
+    
 };
 
 
