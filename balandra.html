@@ -305,6 +305,20 @@
             super-hands 
             sphere-collider="objects: .interactivo">
         </a-entity>
+        <!-- Controlador izquierdo -->
+        <a-entity id="controller1" 
+        oculus-touch-controls="hand: left" 
+        cursor="fuse: true; fuseTimeout: 1500; rayOrigin: mouse"  
+        tracked-controls="controllerType: oculus"  
+        laser-controls="color: #FF0000"></a-entity> 
+
+        <!-- Controlador derecho -->
+        <a-entity id="controller2" 
+        oculus-touch-controls="hand: right"   
+        cursor="fuse: true; fuseTimeout: 1500; rayOrigin: mouse"  
+        tracked-controls="controllerType: oculus"  
+        laser-controls="color: #00FF00"></a-entity>  
+
     </a-scene>
     <script>
         document.querySelectorAll(".interactivo").forEach(item => {
