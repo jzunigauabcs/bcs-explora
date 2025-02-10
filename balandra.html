@@ -294,17 +294,6 @@
         </a-entity>
         </a-entity>
 
-        <a-entity id="leftHand" 
-            hand-tracking-controls="hand: left" 
-            super-hands 
-            sphere-collider="objects: .interactivo">
-        </a-entity>
-    
-        <a-entity id="rightHand" 
-            hand-tracking-controls="hand: right" 
-            super-hands 
-            sphere-collider="objects: .interactivo">
-        </a-entity>
         <!-- Controlador izquierdo -->
         <a-entity id="controller1" 
         oculus-touch-controls="hand: left" 
@@ -320,13 +309,7 @@
         laser-controls="color: #00FF00"></a-entity>  
 
     </a-scene>
-    <script>
-        document.querySelectorAll(".interactivo").forEach(item => {
-            item.addEventListener("click", function () {
-                console.log("Elemento seleccionado:", this);
-            });
-        });
-    </script>
+    
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras/dist/aframe-extras.min.js"></script>
 
