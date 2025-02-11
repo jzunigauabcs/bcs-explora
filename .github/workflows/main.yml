@@ -22,3 +22,5 @@ jobs:
           source: "."  # Archivos a copiar
           target: "/var/www/bcsxplora/html"  # Ruta en el servidor
           strip_components: 1  # Elimina la carpeta del repositorio
+          overwrite: true
+          rm: true
