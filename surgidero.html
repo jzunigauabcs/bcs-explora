@@ -8,103 +8,221 @@
         <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <body>
-        <img src="images/close.png" class="close" alt="Cerrar" title="Cerrar">
+    <body id="surgidero">
         <a-scene device-orientation-permission-ui="enabled: false">
-            <a-sky id="sky" src="#point1" rotation="0 -80 0"></a-sky>
+            <a-sky  id="sky" src="#point1" rotation="0 -80 0"></a-sky> 
+            
             <a-assets>
-                <img id="point1" src="images/1.webp"  alt="Imagen 1">
-                <img id="point2" src="images/2.webp"  alt="Imagen 2">
-                <img id="point3" src="images/3.webp"  alt="Imagen 3">
-                <img id="point4" src="images/4.webp"  alt="Imagen 4">
-                <img id="point5" src="images/5.webp"  alt="Imagen 5">
-                <img id="hotspot" src="images/info-icon.png" alt="hotspot">
-                <img id="point6" src="images/HSP1.PNG" preload='auto' alt="Imagen 6">
-                <img id="close" src="images/close.png" preload='auto' alt="close">
-                <img id="close1" src="images/close1.png" alt="close">
-                <img id="point" src="images/point.png" alt="point">
+                <img id="point1" src="images/1.webp" alt="Imagen 1">
+                <img id="point2" src="images/2.webp" alt="Imagen 2">
+                <img id="point3" src="images/3.webp" alt="Imagen 3">
+                <img id="point4" src="images/4.webp" alt="Imagen 4">
+                <img id="point5" src="images/5.webp" alt="Imagen 5">
+                <video id="atras" autoplay loop muted src="images/direction.webm" alt="hotspot"></video>
+                <img id="hsp1" src="images/HSP1.PNG" alt="hsp1">
                 <img id="hsp2" src="images/HSP2.PNG" alt="hsp2">
-                <img id="hsp11" src="images/HSP11.PNG" alt="Imagen flores">
+                <img id="hsp3" src="images/HSP3.PNG" alt="hsp3">
+                <img id="hsp4" src="images/HSP4.PNG" alt="hsp4">
+                <img id="hsp5" src="images/HSP5.PNG" alt="hsp5">
+                <img id="hsp6" src="images/HSP6.PNG" alt="hsp6">
+                <img id="hsp7" src="images/HSP7.PNG" alt="hsp7">
+                <img id="hsp8" src="images/HSP8.PNG" alt="hsp8">
+                <img id="hsp9" src="images/HSP9.PNG" alt="hsp9">
+                <img id="hsp10" src="images/HSP10.PNG" alt="hsp10">
+                <img id="hsp11" src="images/HSP11.PNG" alt="hsp11">
+                
+                <img id="close1" src="images/close1.png" alt="close1">
+                <img id="siguiente" src="images/sig.png" alt="sig">
+                <video id="adelante" autoplay loop muted src="images/adelante.webm" alt="adelante"></video>
+                <video id="video" autoplay loop muted src="images/try.webm"></video>
+    
             </a-assets>
-           <!-- <a-entity id="spots" hotspots>
-                <a-entity id="group-point1" scale="1 1 1">
-                    <a-image spot="linkto:#point2;spotgroup:group-point2" position="8.5 0.8 8.8"></a-image>
-                    <a-image src="#point" position="10 2 -12.8" rotation="0.000 150.000 0.000" material="opacity:0.5" geometry="width: 1.7; height: 1.7"></a-image>
-                </a-entity>
-                <a-entity id="group-point6" scale="0 0 0">
-                    <a-image spot="linkto:#point1;spotgroup:group-point1" position="8.5 0.8 8.8"></a-image>
-                </a-entity>
-                <a-entity id="group-point2" scale="0 0 0">
-                    <a-image spot="linkto:#point1;spotgroup:group-point1" position="1 1.2 -8"></a-image>
-                    <a-image spot="linkto:#point3;spotgroup:group-point3" position="3 -0.1 15"></a-image>
-                </a-entity>
-                <a-entity id="group-point3" scale="0 0 0">
-                    <a-image spot="linkto:#point4;spotgroup:group-point4" position="7.1 0.7 4"></a-image>
-                    <a-image spot="linkto:#point2;spotgroup:group-point2" position="-12.9 0.7 4"></a-image>
-                </a-entity>
-                <a-entity id="group-point4" scale="0 0 0">
-                    <a-image spot="linkto:#point3;spotgroup:group-point3" position="-10 0 -8"></a-image>
-                    <a-image spot="linkto:#point5;spotgroup:group-point5" position="10 0 7"></a-image>
-                </a-entity>
-                <a-entity id="group-point5" scale="0 0 0">
-                    <a-image spot="linkto:#point4;spotgroup:group-point4" position="-6 0 -1.3"></a-image>
-                </a-entity>
-            </a-entity>-->
             <a-entity id="spots" hotspots scale="1 1 1">
                 <a-entity id="group-point1">
-                    <a-image spot="linkto:#point2;spotgroup:group-point2" position="8.5 0.8 8.8" rotation="0.000 40.000 0.000" material=""  src="#hotspot" ></a-image>  
-                    <a-image id="open" src="#point" position="5 2 -12.8" rotation="0.000 150.000 0.000"  material="opacity:0.5" geometry="width: 1.7; height: 1.7" visible="true" visibilidad></a-image>
-                    <a-entity id="hsp1-image" position="8 3 -7" rotation="0.000 -35.000 0.000" visible="false">
-                        <a-plane position="0 -0.25 0" rotation="0 0 0" geometry="width: 10; height: 10.5" material="color: black; opacity: 0.7"></a-plane>
-                        <a-image position="0 2 0.01" src="#hsp2" geometry="width: 10; height: 6" material=""></a-image>
-                        <a-image position="4.3 4.3 0.03" id="close" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
-                        <a-text position="-2.9 -1.6 0.01" value="El junco" align="right" color="white" width="11.9" text=""></a-text>
-                        <a-text position="-4.8 -3.7 0.01" value="Es una planta perenne que pertenece a la familia Juncaceae. Se encuentra en todo el mundo, especialmente en areas humedas y pantanosas. Sus tallos son delgados y flexibles, creciendo en forma de tubo. Es comunmente asociado con la vegetacion de humedales y se utiliza para hacer cestas, tapetes y otros productos de trenzado." align="left" color="white" width="10" text=""></a-text>
+                    <a-video class="adelante" spot="linkto:#point2;spotgroup:group-point2" position="7 0 8.9" rotation="-30 40 90" material="opacity=0.8" src="#adelante" geometry="width: 1.8; height: 1.8"></a-video>
+                    <a-video id="open1" src="#video" position="5 2 -12.8" rotation="0.000 150.000 0.000"  material="opacity:0.8" geometry="width: 3; height: 3" visible="true" visibilidad="openImageId: open1; imageId: tarjeta1; closeId: close1" ></a-video>
+                    <a-entity id="tarjeta1" position="8 3 -7" rotation="0.000 -35.000 0.000" visible="false" carousel="imageIds: hsp1, hsp2">
+                        <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 12" material="color: black; opacity: 0.7"></a-plane>
+                        <a-image id="carousel-image" position="0 2 0.01" geometry="width: 9.5; height: 5.5"></a-image>
+                        <a-image id="sigCar" position="4.3 1.6 0.1" src="#siguiente" rotation="0 180 0" material="opacity: 0.7" geometry="width:0.8; height:0.8" class="carousel-next"></a-image>
+                        <a-image position="4.3 4.3 0.03" id="close1" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-image id="atrasCar" position="-4.3 1.6 0.1" src="#siguiente" rotation="" material="opacity: 0.7" geometry="width:0.8; height:0.8" class="carousel-prev"></a-image>
+                        <a-text value="Junco espadaña" position="0 -1.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="Schoenoplectus americanus, conocida comúnmente como junco espadaña o tule, es una especie de planta herbácea de la familia Cyperaceae que crece en humedales, márgenes de ríos, lagunas y estuarios. Se caracteriza por sus tallos erectos, triangulares, que pueden alcanzar varios metros de altura, y sus inflorescencias en forma de espigas. Esta especie es importante en la estabilización de suelos y en la filtración de aguas, además de proporcionar refugio y alimento a diversas especies acuáticas y avícolas. Esta especie de junco no está incluida en la NOM-059-SEMARNAT-2010." position="0 -2.45 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    </a-entity>
+    
+    
+                    <a-video id="openS2" src="#video" position="-8 -1.3 -4" rotation="0.000 60.000 0.000" material="opacity:0.8" geometry="width: 2; height: 2" visible="true" visibilidad="openImageId: openS2; imageId: tarS2; closeId: cloS2"></a-video>
+                    <a-entity id="tarS2" position="-10 3 2" rotation="0.000 90.000 0.000" visible="false">
+                        <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.7"></a-plane>
+                        <a-circle position="4.3 2.3 0.03" id="cloS2" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS2" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                        <a-text value="Agua dulce" position="0 1.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="El arroyo Eureka en La Ribera, Baja California Sur, es una fuente importante de agua dulce en una región predominantemente árida. Este arroyo abastece de agua a ecosistemas locales y a comunidades cercanas, siendo vital para la agricultura y la fauna silvestre. Su caudal varía según las precipitaciones estacionales, pero juega un rol crucial en la recarga de los acuíferos subterráneos. La biodiversidad en la zona incluye especies endémicas que dependen del agua dulce para sobrevivir. Sin embargo, el arroyo enfrenta presiones debido al cambio climático y al crecimiento urbano en la región." position="0 0 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    </a-entity>
+
+                    <a-entity position="0.2 0.4 -1.5" rotation="-88 -95 0.000">
+                        <a-plane color="#ffffff" opacity="0.35" width="2" height="0.30" material="" geometry=""></a-plane>
+                        <a-text value="Camino 1" color="black" align="center" width="4" text=""></a-text>
+                    </a-entity>
+    
+                </a-entity>
+                
+                <a-entity id="group-point2" scale="0 0 0">
+                    
+                    <a-video class="atras" spot="linkto:#point1;spotgroup:group-point1" position="0.05 0.6 -4.8" rotation="-75 -7 90" src="#atras" material="opacity=0.7" geometry="width: 1.2; height: 1.2"></a-video>
+
+                    <a-video class="adelante" spot="linkto:#point3;spotgroup:group-point3" rotation="85 40 113" position="2.2 0 10" src="#adelante" material="opacity: 0.7" geometry="width:4; height: 2"></a-video>
+                    <a-video src="#video" id="open2" position="5.2 2.1 10" rotation="0.000 40.000 0.000" material="opacity:0.7" geometry="width: 1.5; height: 1.5" visible="true" visibilidad="openImageId: open2; imageId: tarjeta2; closeId: close2"></a-video>
+                    <a-entity id="tarjeta2" position="10 3 6" rotation="0.000 -130.000 0.000" visible="false" carousel="imageIds: hsp3,hsp5,hsp4,hsp6,hsp7,hsp8">
+                        <a-plane position="0 -0.5 0" rotation="0 0 0" geometry="width: 10; height: 11" material="color: black; opacity: 0.7"></a-plane>
+                        <a-image id="carousel-image" position="0 2 0.01" geometry="width: 9.5; height: 5.5" material="" src="#hsp8"></a-image>
+                        <a-image id="sigCar" position="4.3 1.6 0.1" src="#siguiente" rotation="0 180 0" material="opacity: 0.7" geometry="width:0.8; height:0.8" class="carousel-next"></a-image>
+                        <a-image position="4.3 4.3 0.03" id="close2" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-image id="atrasCar" position="-4.3 1.6 0.1" src="#siguiente" rotation="" material="opacity: 0.7" geometry="width:0.8; height:0.8" class="carousel-prev"></a-image>
+                        <a-text value="Mangle botoncillo" position="0 -1.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="Conocarpus erectus, conocido como mangle botoncillo, es una especie arbórea-arbustiva de la familia Combretaceae que se encuentra en marismas, estuarios y manglares. Se caracteriza por su crecimiento arbustivo o arbóreo, con hojas coriáceas y flores pequeñas agrupadas en racimos. Dicha especie está incluida en la NOM-059-SEMARNAT-2010 bajo la categoría “Amenazada” (A)." position="0 -2.7 0.01" align="center" color="white" width="9.5" text="wrapCount: 50; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    </a-entity>
+    
+                    <a-video id="openS3" src="#video" position="-1 5 20" rotation="0.000 0.000 0.000" material="opacity:0.8" geometry="width: 3; height: 3" visible="true" visibilidad="openImageId: openS3; imageId: tarS3; closeId: cloS3"></a-video>
+                    <a-entity id="tarS3" position="-8 3.5 10" rotation="0.000 140.000 0.000" visible="false">
+                        <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
+                        <a-circle position="4.3 2.3 0.03" id="cloS3" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS3" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                        <a-text value="Pino salado" position="0 1.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="Tamarix ramosissima, conocida como pino salado, es un arbusto o árbol pequeño de la familia Tamaricaceae que se encuentra en áreas costeras, márgenes de ríos y zonas salinas. Se caracteriza por sus hojas pequeñas y escamosas, y sus flores rosadas o blancas agrupadas en racimos largos y delgados. Su hábito de crecimiento es arbustivo o arbóreo, y es capaz de formar densos matorrales que pueden alterar los ecosistemas ribereños y costeros. Esta especie es resistente a suelos salinos y tolerante a la sequía y es considerada como especie invasora en México. Esta especie no está incluida en la NOM-059-SEMARNAT-2010." position="0 0.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 45; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    </a-entity>
+    
+                </a-entity>
+                
+                <a-entity id="group-point3"  scale="0 0 0">
+                    <a-image class="adelante" spot="linkto:#point4;spotgroup:group-point4" position="12.1 1.5 0.5" rotation="0.000 60.000 0.000" src="#adelante" material="opacity=0.8" geometry="width: 1.5; height: 1.5" ></a-image>
+                    <a-image class="atras" spot="linkto:#point2;spotgroup:group-point2" position="-12.9 1.2 3.5" rotation="0.000 110.000 0.000" src="#atras" material="opacity=0.8" geometry="width: 1.8; height: 1.8" ></a-image>
+                    <!--<a-video src="#video" id="openS4" position="7.0 0.5 4" rotation="0.000 50.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 1.2; height: 1.2"></a-video>-->
+                    
+                    <a-video src="#video" id="openS5" position="2 1 -8" rotation="0.000 150.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: openS5; imageId: tarS5; closeId: cloS5"></a-video>
+                    <a-entity id="tarS5" position="8 1 -8" rotation="0.000 -50.000 0.000" visible="false">
+                        <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
+                        <a-circle position="4.3 2.3 0.03" id="cloS5" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS5" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                        <a-text value="Presencia de ganado local" position="0 1.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="La presencia de ganado local en las marismas puede generar impactos negativos, especialmente en áreas con escasez de agua. El pastoreo excesivo deteriora la vegetación nativa y altera los ecosistemas acuáticos al compactar el suelo y reducir la capacidad de retención de agua. Esto puede agravar la escasez hídrica, ya que el ganado puede consumir grandes cantidades de agua dulce disponible en la zona. Además, la presión sobre los recursos hídricos limita la regeneración de vegetación clave en las marismas, afectando su capacidad para almacenar carbono y proporcionar hábitats para diversas especies. La gestión adecuada del ganado es esencial para conservar estos ecosistemas." position="0 0.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 48; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    </a-entity>
+                    <a-video src="#video" id="openS6" position="-3.5 1.4 -7" rotation="0.000 10.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: openS6; imageId: tarS6; closeId: cloS6"></a-video>
+                    <a-entity id="tarS6" position="-12 1 -8" rotation="0.000 40.000 0.000" visible="false">
+                        <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
+                        <a-circle position="4.3 2.3 0.03" id="cloS6" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS6" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                        <a-text value="Palmar y su asociación con la marisma y otros ecosistemas" position="0 2 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="El palmar de Baja California Sur es un ecosistema costero caracterizado por la presencia de palmas, principalmente Washingtonia robusta y Brahea armata. Estos palmares se encuentran en zonas áridas y semiáridas, donde proporcionan hábitats cruciales para diversas especies de fauna, como aves y pequeños mamíferos. Además, desempeñan un papel importante en la protección del suelo contra la erosión y en la conservación del agua subterránea. Sin embargo, los palmares de Baja California Sur enfrentan amenazas por el cambio climático y la expansión urbana. La conservación de estos ecosistemas es esencial para mantener su biodiversidad y los servicios que brindan." position="0 0.3 0.01" align="center" color="white" width="9.5" text="wrapCount: 48; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    </a-entity>
+                
+                </a-entity>
+                
+                <a-entity id="group-point4" scale="0 0 0">
+                    <a-image class="atras" spot="linkto:#point3;spotgroup:group-point3" position="-7 -1 -5" rotation="-40.000 40.000 100.000" src="#atras" material="opacity=0.8" geometry="width:1.8; height: 1.8" ></a-image>
+                    <a-image class="adelante" spot="linkto:#point5;spotgroup:group-point5" position="5 0 4" rotation="60.000 40.000 80.000" src="#adelante" material="opacity=0.8" geometry="width:1.4; height:1.4" look-at="#cam"></a-image>
+                    <a-video src="#video" id="openS7" position="-2 -1 -3.2" rotation="0.000 30.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: openS7; imageId: tarS7; closeId: cloS7"></a-video>
+                    <a-entity id="tarS7" position="2 3 -10" rotation="0.000 -10.000 0.000" visible="false">
+                        <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
+                        <a-circle position="4.3 2.3 0.03" id="cloS7" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS7" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                        <a-text value="Tripa de aura" position="0 1.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="El palmar de Baja California Sur es un ecosistema costero caracterizado por la presencia de palmas, principalmente Washingtonia robusta y Brahea armata. Estos palmares se encuentran en zonas áridas y semiáridas, donde proporcionan hábitats cruciales para diversas especies de fauna, como aves y pequeños mamíferos. Además, desempeñan un papel importante en la protección del suelo contra la erosión y en la conservación del agua subterránea. Sin embargo, los palmares de Baja California Sur enfrentan amenazas por el cambio climático y la expansión urbana. La conservación de estos ecosistemas es esencial para mantener su biodiversidad y los servicios que brindan." position="0 0.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 48; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
                     </a-entity>
                 </a-entity>
                 
-                <a-entity id="group-point2" scale="0 0 0">
-                    <a-image spot="linkto:#point1;spotgroup:group-point1" position="0.1 0.6 -10" ></a-image>
-                    <a-image spot="linkto:#point3;spotgroup:group-point3" position="2.5 1.2 10"></a-image>
-                    <a-image src="#point" position="5.2 2.1 10" rotation="0.000 40.000 0.000" look-at="#cam" material="opacity:0.6" geometry="width: 1.2; height: 1.2"></a-image>
-                </a-entity>
-                
-                <a-entity id="group-point3" scale="0 0 0">
-                    <a-image spot="linkto:#point4;spotgroup:group-point4" position="15.1 0.8 2" rotation="0.000 70.000 0.000"></a-image>
-                    <a-image spot="linkto:#point2;spotgroup:group-point2" position="-12.9 0.7 4" rotation="0.000 90.000 0.000"></a-image>
-                    <a-image src="#point" position="7.0 0.3 5" rotation="0.000 50.000 0.000" look-at="#cam" material="opacity:0.6" geometry="width: 1; height: 1"></a-image>
-                </a-entity>
-                
-                <a-entity id="group-point4" scale="0 0 0">
-                    <a-image spot="linkto:#point3;spotgroup:group-point3" position="-10 0 -8" rotation="0.000 40.000 0.000"></a-image>
-                    <a-image spot="linkto:#point5;spotgroup:group-point5" position="10 0 7" rotation="0.000 40.000 0.000"></a-image>
-                </a-entity>
-                
                 <a-entity id="group-point5" scale="0 0 0">
-                    <a-image spot="linkto:#point4;spotgroup:group-point4" position="-9 0 -1.3" rotation="0.000 70.000 0.000" src="#hotspot"></a-image>
-                    <a-image id="open2" position="1 -3 2.2" rotation="70 50 0" src="#point" material="opacity:0.6" visible="true" visibilidad2></a-image>
-                    <a-entity id="hsp1-image2" position="7 0.5 -2.5" rotation="0.000 -75.000 0.000" visible="false">
+                    <a-image class="close interactivo" src="images/puerta.png" position="-7.5 -5 20.5" width="3.5" height="3.5" event-set__click="_event: click; color: #00FF00" material="" geometry="" rotation="0 150 0"></a-image>
+                    <a-image class="atras" spot="linkto:#point4;spotgroup:group-point4" position="-8 0 -1.3" rotation="-40.000 70.000 90.000" src="#atras" material="opacity:0.8" geometry="width:1.5; height:1.5" look-at="#cam"></a-image>
+                   
+                    <a-video id="openSu" position="3.5 -1 1" rotation="70 50 0" src="#video" material="opacity:0.8" visible="true" visibilidad="openImageId: openSu; imageId: tarSu; closeId: closeSu" geometry=""></a-video>
+                    <a-entity id="tarSu" position="7 0.5 -2.5" rotation="0.000 -75.000 0.000" visible="false">
                         <a-plane position="0 -0.25 0" rotation="0 0 0" geometry="width: 10; height: 10.5" material="color: black; opacity: 0.7"></a-plane>
                         <a-image position="0 2 0.01" src="#hsp11" geometry="width: 10; height: 6" material=""></a-image>
-                        <a-image position="4.3 4.3 0.03" id="close2" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
-                        <a-text position="-1 -1.6 0.01" value="Ludwigia repens" align="right" color="white" width="11.9" text=""></a-text>
-                        <a-text position="-4.9 -3.7 0.01" value="Es una especie de planta con flores de la familia de las onagas conocidas por el nombre comun de sause primula rastrero. Es originaria de partes de las Americas y tiene el portencial de propagarse facilmente y naturalizarse en muchas areas. Es conocida como una maleza acuatica en algunas regiones." align="left" color="white" width="10" text=""></a-text>
+                        <a-image position="4.3 4.3 0.03" id="closeSu" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>
+                        <a-text value="Duraznillo de agua" position="0 -1.7 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json" "=""></a-text>
+                        <a-text value="Ludwigia peploides  (onagraria, enramada de las tarariras) es una especie de planta acuática perteneciente a la familia de las onagráceas, perenne, de tallos débiles, alcanza de 30 a 80 cm de altura, florece casi todo el año. Con fruto cápsula alargado, de 2 cm de largo." position="0 -2.8 0.01" align="center" color="white" width="9.5" text="wrapCount: 47; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    </a-entity>
+                    
+                    <a-video src="#video" id="openS8" position="-1 0.5 -1.5" rotation="90.000 30.000 0.000" look-at="#cam" material="opacity:0.9" geometry="width: 0.7; height: 0.9" visible="true" visibilidad="openImageId: openS8; imageId: tarS8; closeId: cloS8"></a-video>
+                    <a-entity id="tarS8" position="-5 3 -10.5" rotation="0.000 10.000 0.000" visible="false">
+                        <a-plane position="0 -1 0" rotation="0 0 0" geometry="width: 10; height: 8" material="color: black; opacity: 0.8"></a-plane>
+                        <a-circle position="4.3 2.3 0.03" id="cloS8" radius="0.3" material="src: #close1; opacity:1"></a-circle>
+                        <!--<a-image position="4.3 2.3 0.03" id="cloS8" src="#close1" geometry="width: 0.6; height: 0.6" material=""></a-image>-->
+                        <a-text value="Carbono azul" position="0 1.5 0.01" align="center" color="white" width="9.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                        <a-text value="El carbono azul se refiere al carbono almacenado en los ecosistemas costeros, como las marismas, que son altamente eficaces en la captura y almacenamiento de carbono. Las marismas actúan como sumideros de carbono, absorbiendo grandes cantidades de CO2 de la atmósfera y almacenándolas en sus suelos anóxicos durante siglos. Además, ayudan a mitigar el cambio climático al reducir las concentraciones de gases de efecto invernadero. La protección y restauración de las marismas es clave para mantener este servicio ecosistémico. Sin embargo, estas áreas enfrentan amenazas por la urbanización y el cambio climático." position="0 0.4 0.01" align="center" color="white" width="9.5" text="wrapCount: 47; lineHeight: 50; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
                     </a-entity>
                 </a-entity>
     
             </a-entity>
+            
             <a-entity id="cam" camera position="0 1.6 0" look-controls>
+
                 <a-entity 
                     cursor="fuse: true; fuseTimeout:2000"
                     geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
                     position="0 0 -1.8"
                     material="shader:flat;color:#ff0000:">
                 </a-entity>
+
+                <a-entity 
+                cursor="rayOrigin: mouse"
+                raycaster="objects: .interactivo"
+                geometry="primitive:ring; radiusInner:0.01; radiusOuter:0.02"
+                position="0 0 -1.8"
+                material="shader:flat; color:#ff0000;">
             </a-entity>
 
+            <a-image 
+                class="closeG interactivo" 
+                src="images/casita.png" 
+                position="0.75 0.30 -1.5" 
+                width="0.18" 
+                height="0.18"
+                event-set__click="_event: click; color: #00FF00">
+            </a-image>
+            <a-image 
+                class="menu interactivo" 
+                id="menu" 
+                src="images/menu.png" 
+                position="-0.80 0.30 -1.5" 
+                width="0.20" 
+                height="0.20"
+                event-set__click="_event: click; color: #FF0000">
+                
+            </a-image>
+
+            <a-entity id="opciones" visible="false">
+                <a-entity id="spotMenu" spot="linkto:#point1;spotgroup:group-point1" position="-2 1.1 -1.5" menu-toggle>
+                    <a-plane class="interactivo" color="#ffffff" opacity="0.8" width="0.8" height="0.15"></a-plane>
+                    <a-text value="Escenario 1" color="black" align="center" width="2"></a-text>
+                </a-entity>
+                <a-entity spot="linkto:#point2;spotgroup:group-point2" position="-2 0.95 -1.5" menu-toggle>
+                    <a-plane class="interactivo" color="#ffffff" class="interactivo" opacity="0.8" width="0.8" height="0.15" menu-toggle></a-plane>
+                    <a-text value="Escenario 2" color="black" align="center" width="2"></a-text>
+                </a-entity>
+                <a-entity spot="linkto:#point3;spotgroup:#group-point3" position="-2 0.80 -1.5" menu-toggle>
+                    <a-plane class="interactivo" color="#ffffff" opacity="0.8" width="0.8" height="0.15"></a-plane>
+                    <a-text value="Escenario 3" color="black" align="center" width="2"></a-text>
+                </a-entity>
+                <a-entity spot="linkto:#point4;spotgroup:#group-point4" position="-2 0.65 -1.5" menu-toggle>
+                    <a-plane class="interactivo" color="#ffffff" opacity="0.8" width="0.8" height="0.15"></a-plane>
+                    <a-text value="Escenario 4" color="black" align="center" width="2"></a-text>
+                </a-entity>
+            </a-entity>
+        
+                <a-entity position="-0.40 0.30 -1.5">
+                    <a-plane color="#222" opacity="0.6" width="0.4" height="0.12"></a-plane>
+                    <a-text id="scene-value" value="Escenario 1" color="white" align="center" width="1.2"></a-text>
+                </a-entity>
+            </a-entity>
         </a-scene>
         <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras/dist/aframe-extras.min.js"></script>
+
         <script src="js/hotspot.js"></script>
-        <!--script src="js/app.js"></script-->
+
+       
     </body>
 </html>
