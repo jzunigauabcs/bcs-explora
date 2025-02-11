@@ -3,19 +3,22 @@ on:
     branches:
       - main
 name: 🚀 Deploy website on push
-jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: 137.184.104.120
-        username: xplora
-        password: ${{ secrets.password }}
-        protocol: ftps
-        port: 22 # todo replace with your web hosts ftps port
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to server via SFTP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          key: ${{ secrets.SFTP_KEY }}
+          port: 22  # Cambia si tu servidor usa otro puerto
+          source: "."  # Archivos a copiar
+          target: "/var/www/bcsxplora/html"  # Ruta en el servidor
+          strip_components: 1  # Elimina la carpeta del repositorio
