@@ -22,5 +22,5 @@ jobs:
           source: "."  # Archivos a copiar
           target: "/var/www/bcsxplora/html"  # Ruta en el servidor
           overwrite: true
-          rm: true
+          rm: false
           debug: true
