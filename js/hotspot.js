@@ -1,7 +1,12 @@
 function init() {
     console.log("Init function running");
     const close = document.querySelector('.close');
-    close.addEventListener('click', () => {
+    close.addEventListener('mouseenter', () => {
+        console.log("click")
+        history.back();
+    });
+    const closeG = document.querySelector('.closeG');
+    closeG.addEventListener('click', () => {
         console.log("click")
         history.back();
     });

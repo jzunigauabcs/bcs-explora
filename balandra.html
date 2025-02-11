@@ -47,6 +47,7 @@
         </a-assets>
         <a-entity id="spots" hotspots scale="1 1 1">
             <a-entity id="group-point1-balandra">
+                
                 <a-video class="adelante" spot="linkto:#pointBal2;spotgroup:group-point2-balandra" position="11 0 -7" rotation="50 110 90" material="opacity=0.8" src="#adelante" geometry="width: 2; height: 1.8"></a-video>
                 <a-video id="op1" src="#video" position="-1 0.2 -8.8" rotation="0.000 0.000 0.000" material="opacity:0.8" geometry="width: 1.2; height: 1.2" visible="true" visibilidad="openImageId: op1; imageId: tar1; closeId: clo1"></a-video>
                 <a-entity id="tar1" position="3 3 -13" rotation="0 -15 0" visible="false">
@@ -202,6 +203,7 @@
             </a-entity>
             
             <a-entity id="group-point5-balandra" scale="0 0 0">
+                <a-image class="close interactivo" src="images/puerta.png" position="-4.5 0.5 5.5" width="1.5" height="1.5" event-set__click="_event: click; color: #00FF00" material="" geometry="" rotation="0 -50 0"></a-image>
                 <a-image class="atras" spot="linkto:#pointBal4;spotgroup:group-point4-balandra" position="-1 0.3 10" rotation="60 20 90" src="#atras" material="opacity:0.8" geometry="width:1.5; height:1.8"></a-image>
                 <a-video src="#video" id="op9" position="0.2 4 0.5" rotation="90.000  60.000 0.000" material="opacity:0.9" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op9; imageId: tar9; closeId: clo9"></a-video>
                 <a-entity id="tar9" position="-2 7 12" rotation="20 -180 0" visible="false">
@@ -250,7 +252,7 @@
         </a-entity>
 
         <a-image 
-            class="close interactivo" 
+            class="closeG interactivo" 
             src="images/casita.png" 
             position="0.75 0.30 -1.5" 
             width="0.18" 

@@ -133,6 +133,7 @@
                 </a-entity>
                 
                 <a-entity id="group-point5" scale="0 0 0">
+                    <a-image class="close interactivo" src="images/puerta.png" position="-7.5 -5 20.5" width="3.5" height="3.5" event-set__click="_event: click; color: #00FF00" material="" geometry="" rotation="0 150 0"></a-image>
                     <a-image class="atras" spot="linkto:#point4;spotgroup:group-point4" position="-8 0 -1.3" rotation="-40.000 70.000 90.000" src="#atras" material="opacity:0.8" geometry="width:1.5; height:1.5" look-at="#cam"></a-image>
                    
                     <a-video id="openSu" position="3.5 -1 1" rotation="70 50 0" src="#video" material="opacity:0.8" visible="true" visibilidad="openImageId: openSu; imageId: tarSu; closeId: closeSu" geometry=""></a-video>
@@ -174,7 +175,7 @@
             </a-entity>
 
             <a-image 
-                class="close interactivo" 
+                class="closeG interactivo" 
                 src="images/casita.png" 
                 position="0.75 0.30 -1.5" 
                 width="0.18" 
