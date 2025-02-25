@@ -203,7 +203,16 @@
             </a-entity>
             
             <a-entity id="group-point5-balandra" scale="0 0 0">
-                <a-image class="close interactivo" src="images/puerta.png" position="-4.5 0.5 5.5" width="1.5" height="1.5" event-set__click="_event: click; color: #00FF00" material="" geometry="" rotation="0 -50 0"></a-image>
+                <a-image src="images/puerta.png" id="puertaSalida" position="-4.5 0.5 5.5" visible="true" width="1.5" height="1.5" event-set__click="_event: click; color: #00FF00" rotation="0 -50 0" visibilidad="openImageId: puertaSalida; imageId: confirmacion; closeId: cancelarPlane"></a-image>
+                <a-entity id="confirmacion" position="-8.0 0.5 10.5" rotation="0 -210 0" visible="false">
+                    <a-plane position="0 0.5 0" rotation="0 0 0" geometry="width: 10; height: 6" material="color: black; opacity: 0.7"></a-plane>
+                    <a-plane position="-2.25 0.2 6" id="cancelarPlane" rotation="0 0 0" geometry="width: 2; height: 0.8" material="color: red; opacity: 0.7"></a-plane>
+                    <a-plane position="0.70 0.2 6" class="close interactivo" rotation="0 0 0" geometry="width: 2; height: 0.8" material="color: green; opacity: 0.7"></a-plane>
+                    <a-text value="Cancelar" position="-2.2 0.45 7" align="center" color="white" width="4.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    <a-text value="Aceptar"  position="0.375 0.45 7" align="center" color="white" width="4.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                    <a-text value="\¿Estás seguro de que desea salir de este paseo?" position="-0.55 2 4" align="center" color="white" width="6.5" text="wrapCount: 25; baseline: top; negate: false;" font="https://raw.githubusercontent.com/mel091/lato-font/refs/heads/main/Lato-Regular-msdf.json"></a-text>
+                </a-entity>
+
                 <a-image class="atras" spot="linkto:#pointBal4;spotgroup:group-point4-balandra" position="-1 0.3 10" rotation="60 20 90" src="#atras" material="opacity:0.8" geometry="width:1.5; height:1.8"></a-image>
                 <a-video src="#video" id="op9" position="0.2 4 0.5" rotation="90.000  60.000 0.000" material="opacity:0.9" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op9; imageId: tar9; closeId: clo9"></a-video>
                 <a-entity id="tar9" position="-2 7 12" rotation="20 -180 0" visible="false">
@@ -276,7 +285,7 @@
                 <a-text value="Escenario 1" color="black" align="center" width="2"></a-text>
             </a-entity>
             <a-entity spot="linkto:#point2;spotgroup:group-point2" position="-2 0.95 -1.5" menu-toggle>
-                <a-plane class="interactivo" color="#ffffff" class="interactivo" opacity="0.8" width="0.8" height="0.15" menu-toggle></a-plane>
+                <a-plane class="interactivo" color="#ffffff" opacity="0.8" width="0.8" height="0.15" menu-toggle></a-plane>
                 <a-text value="Escenario 2" color="black" align="center" width="2"></a-text>
             </a-entity>
             <a-entity spot="linkto:#point3;spotgroup:#group-point3" position="-2 0.80 -1.5" menu-toggle>
