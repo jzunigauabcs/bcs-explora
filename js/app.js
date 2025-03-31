@@ -1,6 +1,6 @@
 const init = async function() {
     let zoomLevel = 1;
-    mapboxgl.accessToken = 'pk.eyJ1Ijoianp1bmlnYXVhYmNzIiwiYSI6ImNtMXBqOXYyOTA1bHoya29kb25nenc4bW8ifQ.zWcn0JIIEkDDfJA6aWJFcQ';
+    mapboxgl.accessToken = CONFIG.MAPBOX_ACCESS_TOKEN;
     const lat = 24.14437; 
     const lng = -110.3005;
     const props = {
