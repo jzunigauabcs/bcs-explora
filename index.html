@@ -1,16 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="map"></div>
-        <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BCSxplora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="destination-menu">
+
+        <video
+            id="background-video"
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
+
+        <!-- capa oscura muy sutil -->
+        <div class="overlay"></div>
+
+        <!-- barra superior: logos + nombre del proyecto -->
+        <div class="brand-bar">
+            <div class="logo-group">
+                <div class="logo-circle"> <img src="resources/secretaria_logo.png" alt="Logo 1"> </div>
+                <div class="logo-circle"><img src="resources/xplora_logo.png" alt="Logo 2"> </div>
+            </div>
+
+            <h1 class="project-name">BCSxplora</h1>
+
+            <div class="logo-group">
+                <div class="logo-circle"> <img src="resources/xplora_logo.png" alt="Logo 3"> </div>
+                <div class="logo-circle"> <img src="resources/secretaria_logo.png" alt="Logo 4"> </div>
+            </div>
+        </div>
+
+        <section class="menu-content">
+            <span class="location">
+                Localidad
+            </span>
+
+            <button
+                id="destination-button"
+                class="destination-button"
+            >
+                Balandra
+            </button>
+
+            <div id="dots-container" class="dots"></div>
+        </section>
+
+        <button
+            id="prev-button"
+            class="arrow arrow-left"
+            aria-label="Recorrido anterior"
+        >
+            <img src="resources/chevron.png" alt="">
+        </button>
+
+        <button
+            id="next-button"
+            class="arrow arrow-right"
+            aria-label="Siguiente recorrido"
+        >
+            <img src="resources/chevron.png" alt="">
+        </button>
+
+    </main>
+
+    <script src="js/destination-carousel.js"></script>
+
+</body>
+
 </html>

@@ -1,31 +1,223 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-#map {
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* main */
+.destination-menu {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* video */
+#background-video {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
-.marker {
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-/* .close {
-    z-index: 100;
+/* capa oscura muy sutil sobre el video */
+.overlay {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 20px;
-    right: 30px;
-    cursor: pointer;
-} */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
 
+/* barra superior con logos + nombre del proyecto */
+.brand-bar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-circle img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.logo-group {
+    display: flex;
+    gap: 12px;
+}
+
+.project-name {
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0 10px;
+}
+
+
+.menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.location {
+    margin-bottom: 8px;
+    color: white;
+    font-size: clamp(1.3rem, 1.7vw, 1.8rem);
+}
+
+.destination-button {
+    min-width: 320px;
+    padding: 16px 45px;
+    border-radius: 60px;
+    background: rgba(11, 87, 75, 0.75);
+    color: white;
+    font-size: clamp(2.4rem, 5vw, 5rem);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    margin-bottom: 25px;
+}
+
+.destination-button:hover {
+    background: rgba(28, 102, 89, 0.75);
+    transform: scale(1.03);
+}
+
+.destination-button:active {
+    transform: scale(0.97);
+}
+
+/* barra de puntos */
+.dots {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.35);
+}
+
+/* flechas sin fondo, solo icono centrado */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+.arrow img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+
+    transition: transform 0.25s ease;
+}
+
+.arrow-left img {
+    transform: rotate(180deg);
+}
+
+.arrow-left {
+    left: 5%;
+}
+
+.arrow-right {
+    right: 5%;
+}
+
+
+.arrow:hover {
+    transform: translateY(-50%) scale(1.08);
+    background: rgba(255, 255, 255, 0.20);
+    border-color: rgba(255, 255, 255, 0.55);
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+.arrow-left:hover img {
+    transform: rotate(180deg) translateX(4px);
+}
+
+.arrow-right:hover img {
+    transform: translateX(4px);
+}
+.arrow:active {
+    transform: translateY(-50%) scale(0.96);
+}
